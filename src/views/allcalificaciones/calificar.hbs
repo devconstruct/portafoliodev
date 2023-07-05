@@ -1,0 +1,782 @@
+<!--Inicio de No calificado  Bimestre 1-->
+<!--Inicio para mostrar los datos del alumno-->
+<br><br><br><br>
+<div class="container youplay-content">
+  <div class="col-md-12">
+    <!-- Billing Information -->
+    {{#each no_calificadoP1}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text"  value="1" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias}}
+              <tr>
+                <td>1</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/1" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{else}}
+              <p>Por el momento no tienes materias que calificar, agrega materias y regresa aqui. <a href="/materias/{{../addmaterias.id_escuela}}/{{../addmaterias.grado}}">Agregra materias</a> </p>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar}}
+              <tr>
+                <td>1</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{else}}
+              <p>Por el momento no tienes calificaciones que mostrar.</p>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl.id_matricula}}/{{../materiasurl.grado}}/{{../materiasurl.id_escuela}}">Listo he terminado de calificar!</a>
+          <br><br>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 1-->
+
+    <!--Inicio de No calificado  Bimestre 2-->
+    <!-- Billing Information -->
+    {{#each no_calificadoP2}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text"  value="2" name="bimestre"readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}"readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias2}}
+              <tr>
+                <td>2</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/2" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar2}}
+              <tr>
+                <td>2</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl2.id_matricula}}/{{../materiasurl2.grado}}/{{../materiasurl2.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 2-->
+
+    <!--Inicio de No calificado  Bimestre 3-->
+    {{#each no_calificadoP3}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text"  value="3" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias3}}
+              <tr>
+                <td>3</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/3" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar3}}
+              <tr>
+                <td>3</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl3.id_matricula}}/{{../materiasurl3.grado}}/{{../materiasurl3.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 3-->
+
+    <!--Inicio de No calificado  Bimestre 4-->
+    {{#each no_calificadoP4}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text"  value="4" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias4}}
+              <tr>
+                <td>4</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/4" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar4}}
+              <tr>
+                <td>4</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl4.id_matricula}}/{{../materiasurl4.grado}}/{{../materiasurl4.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 4-->
+
+    <!--Inicio de No calificado  Bimestre 5-->
+    {{#each no_calificadoP5}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text"  value="5" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias5}}
+              <tr>
+                <td>5</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/5" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar5}}
+              <tr>
+                <td>5</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl5.id_matricula}}/{{../materiasurl5.grado}}/{{../materiasurl5.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 5-->
+
+    <!--Inicio de No calificado  Bimestre 6-->
+    {{#each no_calificadoP6}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text" value="6" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias6}}
+              <tr>
+                <td>6</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/6" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar6}}
+              <tr>
+                <td>6</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl6.id_matricula}}/{{../materiasurl6.grado}}/{{../materiasurl6.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 6-->
+
+    <!--Inicio de No calificado  Bimestre 7-->
+    {{#each no_calificadoP7}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text" value="7" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias7}}
+              <tr>
+                <td>7</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/7" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar7}}
+              <tr>
+                <td>7</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl7.id_matricula}}/{{../materiasurl7.grado}}/{{../materiasurl7.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 7-->
+
+    <!--Inicio de No calificado  Bimestre 8-->
+    {{#each no_calificadoP8}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text" value="8" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias8}}
+              <tr>
+                <td>8</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/8" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar8}}
+              <tr>
+                <td>8</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl8.id_matricula}}/{{../materiasurl8.grado}}/{{../materiasurl8.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 8-->
+
+    <!--Inicio de No calificado  Bimestre 9-->
+    {{#each no_calificadoP9}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text" value="9" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias9}}
+              <tr>
+                <td>9</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/9" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar9}}
+              <tr>
+                <td>9</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl9.id_matricula}}/{{../materiasurl9.grado}}/{{../materiasurl9.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 9-->
+
+    <!--Inicio de No calificado  Bimestre 10-->
+    {{#each no_calificadoP10}}
+    <h2 class="mt-0">Alumno</h2>
+    <div class="row">
+      <input type="hidden" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+      <input type="hidden" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+      <input type="hidden" value="{{grado}}" name="grado" class="form-control" readonly>
+      <div class="col-md-3">
+        <p>Bimestre:</p>
+        <div class="youplay-input">
+          <input type="text" value="10" name="bimestre" readonly>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Nombres:</p>
+        <div class="youplay-input">
+          <input type="text" value="{{nombres}}" readonly>
+        </div>
+      </div>
+    </div>
+    <!--Fin de mostrar los datos del alumno-->
+
+    <div class="container">
+      <div class="row vertical-gutter">
+        <div class="col-md-12">
+          <h2 class="h1">Lista de Materias</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmaterias10}}
+              <tr>
+                <td>10</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td><a href="/allcalificaciones/calif/{{id_materias}}/{{id_matricula}}/10" class="btn btn-secondary">Calificar</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="h1">Calificaciones</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                <th>Periodo</th>
+                <th>Grado</th>
+                <th itemprop="name">Materia</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each ../listmateriascalificar10}}
+              <tr>
+                <td>10</td>
+                <td>{{grado}}</td>
+                <td>{{materias}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/allcalificaciones/calificado/{{../materiasurl10.id_matricula}}/{{../materiasurl10.grado}}/{{../materiasurl10.id_escuela}}">Listo he terminado de calificar!</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <!--Fin de No calificado Bimestre 10-->
+  </div>
+</div>

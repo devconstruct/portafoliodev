@@ -1,0 +1,50 @@
+<br><br><br><br><br>
+<div class="container youplay-content">
+
+  <div class="row">
+
+    <div class="col-md-9">
+
+      <div class="row">
+        <div class="col-md-9">
+          <h4>Preguntas a las que otorgaste una respuesta.</h4>
+        </div>
+      </div>
+
+      <table class="youplay-messages table table-hover">
+        <tbody>
+          {{#each myanswer}}
+          <tr>
+            <td class="message-from">
+              <a href="/questions/answer/{{id_pregunta}}/{{token}}" class="message-from-name" title="Titulo">{{titulo}}</a>
+              <br>
+              <span class="date">{{moment created_at format="YYYY-MM-DD"}} - {{timeago created_at}}</span>
+            </td>
+          </tr>
+          {{else}}
+            <p>Por el momento no haz otorgado ninguna respuesta.</p>
+          {{/each}}
+        </tbody>
+      </table>
+      <div class="pagination pagination-centered">
+        <ul class="pagination">
+          <li><a href="/profile/myanswer/{{user.id}}/{{idtok.token}}">Primero</a></li>
+          <li id="demo"></li>
+          <li><a href="/profile/myanswer/{{user.id}}/{{questionlast.last}}/{{idtok.token}}">Ultimo</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script>
+var text = "";
+var i;
+var p = {{totalpag.pagina}}
+for (i = 1; i < p; i++) {
+  text += "<a href='/profile/myanswer/{{user.id}}/"+[i]+"/{{idtok.token}}'>"+[i]+"</a>";
+  //document.body.innerHTML += "<a href='"+[i]+"'>el numero es</a>" + i;
+}
+document.getElementById("demo").innerHTML = text;
+</script>

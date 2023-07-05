@@ -1,0 +1,481 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+<div class=" no-banner">
+
+  <div class="container youplay-news youplay-post">
+    <div class="container youplay-content">
+      <!--INICIO Graficas MAPA CURRICULAR A MEDIADOS 2019-->
+
+      <!-- Post Info -->
+      <div class="content">
+        <div class="meta">
+          <div class="item">
+            <a id="downloadLink" onclick="exportF(this)"><i class="fa fa-file-excel-o colorlike" aria-hidden="true"></i> Descargar lista de alumnos</a>
+          </div>
+          <div class="item">
+
+            <a id="pastel"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Descargar Gráfica de pastel</a>
+          </div>
+          <div class="item">
+            <a id="foo"><i class="fa fa-bar-chart colorbarra" aria-hidden="true"></i> Descargar Gráfica de Barras</a>
+          </div>
+        </div>
+      </div>
+      <article class="news-one">
+        <!-- Post Text -->
+        <div class="description">
+
+
+          <!-- Tables -->
+          {{#if calificaciones2019}}
+          <table class="table table-bordered table-hover" id="table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Español</th>
+                <th>Matemáticas</th>
+                <th>Conocimiento del Medio</th>
+                <th>Artes</th>
+                <th>Educación Fisica</th>
+                <th>Ingles</th>
+                <th>Promedio</th>
+              </tr>
+              {{/if}}
+            </thead>
+            <tbody>
+              {{#each calificaciones2019}}
+              <tr>
+                <td>{{nombres}}</td>
+                <td>{{espanol}}</td>
+                <td>{{matematicas}}</td>
+                <td>{{cono_medio}}</td>
+                <td>{{artes}}</td>
+                <td>{{edu_socioemocional}}</td>
+                <td>{{edu_fisica}}</td>
+                <td>{{P}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <!-- /Tables -->
+
+
+          {{#each listcalificacionesprimero_segundo2019}}
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <!--Inicio de grafica de pastel-->
+          <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Español',     {{sumespanol}}],
+              ['Matematicas',      {{sumatematicas}}],
+              ['Conocimiento del Medio',  {{sumcono_medio}}],
+              ['Artes', {{sumartes}}],
+              ['Educacion Sociemocional', {{sumedu_socioemocional}}],
+              ['Educacion Fisica', {{sumedu_fisica}}]
+            ]);
+
+            var options = {
+              title: 'Promedio general de grupo por materia',
+              is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          }
+          </script>
+          <!--Fin de grafica de pastel-->
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Español');
+            data.setValue(0, 1, {{sumespanol}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Matematicas');
+            data.setValue(1, 1, {{sumatematicas}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Conocimiento del Medio');
+            data.setValue(2, 1, {{sumcono_medio}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Artes');
+            data.setValue(3, 1, {{sumartes}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Educación Sociemocional');
+            data.setValue(4, 1, {{sumedu_socioemocional}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Educación Fisica');
+            data.setValue(5, 1, {{sumedu_fisica}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Promedio general de grupo por materia',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+            </div>
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+
+        </div>
+        <!-- /Post Text -->
+      </article>
+      <!-- /Post Info -->
+
+      <!-- Post Info -->
+      <article class="">
+        <!-- Post Text -->
+        <div class="description">
+
+
+          <!-- Tables -->
+          {{#if calificacionesT32019}}
+          <table class="table table-bordered table-hover" id="table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Español</th>
+                <th>Matemáticas</th>
+                <th>Ciencias Naturales</th>
+                <th>Entidad donde Vivo</th>
+                <th>Formación Civica y Ética</th>
+                <th>Artes</th>
+                <th>Educación Socioemocional</th>
+                <th>Educación Fisica</th>
+              </tr>
+              {{/if}}
+            </thead>
+            <tbody>
+              {{#each calificacionesT32019}}
+              <tr>
+                <td>{{nombres}}</td>
+                <td>{{espanol}}</td>
+                <td>{{matematicas}}</td>
+                <td>{{cien_naturales}}</td>
+                <td>{{enti_vivo}}</td>
+                <td>{{form_civ_etica}}</td>
+                <td>{{artes}}</td>
+                <td>{{edu_socioemocional}}</td>
+                <td>{{edu_fisica}}</td>
+                <td>{{P}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <!-- /Tables -->
+
+
+          {{#each listcalificacionestercero2019}}
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <!--Inicio de grafica de pastel-->
+          <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Español',     {{sumespanol}}],
+              ['Matematicas',      {{sumatematicas}}],
+              ['Ciencias Naturales',  {{sumcien_naturales}}],
+              ['Entidad donde Vivo', {{sumenti_vivo}}],
+              ['FOCE', {{sumform_civ_etica}}],
+              ['Artes', {{sumartes}}],
+              ['Educacion Sociemocional', {{sumedu_socioemocional}}],
+              ['Educacion Fisica', {{sumedu_fisica}}]
+            ]);
+
+            var options = {
+              title: 'Promedio general de grupo por materia',
+              is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          }
+          </script>
+          <!--Fin de grafica de pastel-->
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Español');
+            data.setValue(0, 1, {{sumespanol}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Matematicas');
+            data.setValue(1, 1, {{sumatematicas}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Ciencias Naturales');
+            data.setValue(2, 1, {{sumcien_naturales}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Entidad donde Vivo');
+            data.setValue(3, 1, {{sumenti_vivo}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'FOCE');
+            data.setValue(4, 1, {{sumform_civ_etica}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Artes');
+            data.setValue(5, 1, {{sumartes}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+            data.setValue(5, 0, 'Educación Sociemocional');
+            data.setValue(5, 1, {{sumedu_socioemocional}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+            data.setValue(5, 0, 'Educación Fisica');
+            data.setValue(5, 1, {{sumedu_fisica}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Promedio general de grupo por materia',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+            </div>
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+
+        </div>
+        <!-- /Post Text -->
+      </article>
+      <!-- /Post Info -->
+
+      <!-- Post Info -->
+      <article class="">
+        <!-- Post Text -->
+        <div class="description">
+
+
+          <!-- Tables -->
+          <table class="table table-bordered table-hover" id="table">
+            <thead>
+              {{#if calificacionesT42019}}
+              <tr>
+                <th>Nombre</th>
+                <th>Español</th>
+                <th>Matemáticas</th>
+                <th>Ciencias Naturales</th>
+                <th>Geografía</th>
+                <th>Historia</th>
+                <th>Formación Civica y Ética</th>
+                <th>Artes</th>
+                <th>Educación Sociemocional</th>
+                <th>Educación Fisica</th>
+                <th>Promedio</th>
+              </tr>
+              {{/if}}
+            </thead>
+            <tbody>
+              {{#each calificacionesT42019}}
+              <tr>
+                <td>{{nombres}}</td>
+                <td>{{espanol}}</td>
+                <td>{{matematicas}}</td>
+                <td>{{cien_naturales}}</td>
+                <td>{{geografia}}</td>
+                <td>{{historia}}</td>
+                <td>{{form_civ_etica}}</td>
+                <td>{{artes}}</td>
+                <td>{{edu_socioemocional}}</td>
+                <td>{{edu_fisica}}</td>
+                <td>{{P}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <!-- /Tables -->
+
+
+          {{#each listcalificacionescuarto_sexto2019}}
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <!--Inicio de grafica de pastel-->
+          <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Español',     {{sumespanol}}],
+              ['Matematicas',      {{sumatematicas}}],
+              ['Ciencias Naturales',  {{sumcien_naturales}}],
+              ['Geografia', {{sumgeografia}}],
+              ['Historia', {{sumhistoria}}],
+              ['FOCE', {{sumform_civ_etica}}],
+              ['Artes', {{sumartes}}],
+              ['Educacion Sociemocional', {{sumedu_socioemocional}}],
+              ['Educacion Fisica', {{sumedu_fisica}}]
+            ]);
+
+            var options = {
+              title: 'Promedio general de grupo por materia',
+              is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          }
+          </script>
+          <!--Fin de grafica de pastel-->
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Español');
+            data.setValue(0, 1, {{sumespanol}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Matematicas');
+            data.setValue(1, 1, {{sumatematicas}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Ciencias Naturales');
+            data.setValue(2, 1, {{sumcien_naturales}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Geografia');
+            data.setValue(3, 1, {{sumgeografia}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Historia');
+            data.setValue(4, 1, {{sumhistoria}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'FOCE');
+            data.setValue(5, 1, {{sumform_civ_etica}});
+            data.setValue(5, 2, 'rgb(209, 126, 12)');
+            data.setValue(6, 0, 'Artes');
+            data.setValue(6, 1, {{sumartes}});
+            data.setValue(6, 2, 'rgb(21, 12, 209)');
+            data.setValue(7, 0, 'Educación Sociemocional');
+            data.setValue(7, 1, {{sumedu_socioemocional}});
+            data.setValue(7, 2, 'rgb(209, 12, 116)');
+            data.setValue(8, 0, 'Educación Fisica');
+            data.setValue(8, 1, {{sumedu_fisica}});
+            data.setValue(8, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Promedio general de grupo por materia',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+            </div>
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+
+        </div>
+        <!-- /Post Text -->
+      </article>
+      <!-- /Post Info -->
+
+      <!--FIN Graficas MAPA CURRICULAR A MEDIADOS 2019-->
+    </div>
+  </div>
+</div>
+<script>
+function exportF(elem) {
+  var table = document.getElementById("table");
+  var html = table.outerHTML;
+  var url = 'data:application/vnd.ms-excel,' + escape(html);
+  elem.setAttribute("href", url);
+  elem.setAttribute("download", "listalumnos.xls");
+  return false;
+}
+</script>
+<script>
+var node = document.getElementById('chart_div');
+var btn = document.getElementById('foo');
+
+btn.onclick = function() {
+
+  domtoimage.toBlob(document.getElementById('chart_div'))
+    .then(function(blob) {
+      window.saveAs(blob, 'grafica-uvlum-barras.png');
+    });
+}
+</script>
+<script>
+var node = document.getElementById('piechart_3d');
+var btn = document.getElementById('pastel');
+
+btn.onclick = function() {
+
+  domtoimage.toBlob(document.getElementById('piechart_3d'))
+    .then(function(blob) {
+      window.saveAs(blob, 'grafica-uvlum-pastel.png');
+    });
+}
+</script>
+<style>
+.colorlike {color:green;}
+.colorpastel {color:red;}
+.colorbarra {color:blue;}
+</style>

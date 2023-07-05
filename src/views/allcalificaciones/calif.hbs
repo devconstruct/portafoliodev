@@ -1,0 +1,593 @@
+<div class="content-wrap">
+  <div class="container youplay-content">
+    <!--Inicio de calificar a periodo 1-->
+    {{#each sicalificadas}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl.id_materias}}/1" method="post">
+        {{#each nocalificadas}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="1" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 1-->
+
+    <!--Inicio de calificar a periodo 2-->
+    {{#each sicalificadas2}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados2}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl2.id_materias}}/2" method="post">
+        {{#each nocalificadas2}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="2" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 2-->
+
+    <!--Inicio de calificar a periodo 3-->
+    {{#each sicalificadas3}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados3}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl3.id_materias}}/3" method="post">
+        {{#each nocalificadas3}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="3" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 3-->
+
+    <!--Inicio de calificar a periodo 4-->
+    {{#each sicalificadas4}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados4}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl4.id_materias}}/4" method="post">
+        {{#each nocalificadas4}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="4" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 4-->
+
+    <!--Inicio de calificar a periodo 5-->
+    {{#each sicalificadas5}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados5}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl5.id_materias}}/5" method="post">
+        {{#each nocalificadas5}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="5" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 5-->
+
+    <!--Inicio de calificar a periodo 6-->
+    {{#each sicalificadas6}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados6}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl6.id_materias}}/6" method="post">
+        {{#each nocalificadas6}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="6" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 6-->
+
+    <!--Inicio de calificar a periodo 7-->
+    {{#each sicalificadas7}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados7}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl7.id_materias}}/7" method="post">
+        {{#each nocalificadas7}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="7" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 7-->
+
+    <!--Inicio de calificar a periodo 8-->
+    {{#each sicalificadas8}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados8}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl8.id_materias}}/8" method="post">
+        {{#each nocalificadas8}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="8" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 8-->
+
+    <!--Inicio de calificar a periodo 9-->
+    {{#each sicalificadas9}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados9}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl9.id_materias}}/9" method="post">
+        {{#each nocalificadas9}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="9" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 9-->
+
+    <!--Inicio de calificar a periodo 10-->
+    {{#each sicalificadas10}}
+    <h1>El alumno ya se encuentra calificado</h1>
+    {{else}}
+    {{#if calificados10}}
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar</h2>
+      <form action="/allcalificaciones/add/{{calificacionesurl10.id_materias}}/10" method="post">
+        {{#each nocalificadas10}}
+        <input type="hidden" name="id_materias" value="{{id_materias}}" readonly>
+        <input type="hidden" name="id_escuela" value="{{id_escuela}}" readonly>
+        <input type="hidden" name="id_matricula" value="{{id_matricula}}" readonly>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Alumno:</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" value="{{nombres}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Periodo:</p>
+            <div class="youplay-input">
+              <input type="text" name="periodo" value="10" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Grado:</p>
+            <div class="youplay-input">
+              <input type="text" name="grado" value="{{grado}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Materias:</p>
+            <div class="youplay-input">
+              <input type="text" name="materias" value="{{materias}}" readonly>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>Calificación:</p>
+            <div class="youplay-input">
+              <input type="number" name="calificaciones" placeholder="10" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    {{/if}}
+    {{/each}}
+    <!--Fin de calificar a periodo 10-->
+  </div>
+</div>

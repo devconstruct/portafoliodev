@@ -1,0 +1,39 @@
+<br><br><br>
+<!-- Review Rating -->
+<div class="youplay-review-rating">
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="youplay-form p-0">
+        <h2 class="mt-0">Paso 1: Materias</h2>
+        <form action="/materias/add/{{admaterias.id_escuela}}/{{admaterias.grado}}" method="post">
+          <div class="">
+            <div class="col-md-12">
+              <p>1.- Escribe el nombre de las materias que impartes <b>una por una</b>. <br><b>Recuerda:</b> una vez agregadas, no podrás modificar sus nombres.
+              </p>
+              <div class="youplay-input form-group">
+                <input type="text" name="materias" placeholder="Ingresa la materia" required>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-default">Guardar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="youplay-form p-0">
+        <h2 class="mt-0">Paso 2: Listado de Materias Agregadas</h2>
+          {{#each listmaterias}}
+          <p>{{materias}}</p>
+          {{/each}}
+          <div class="row">
+            <p>Presiona el botón de abajo cuando termines de escribir una por una tus materias.</p>
+            <a href="/allmatricula/{{admaterias.id_escuela}}/{{admaterias.grado}}" class="btn btn-secondary">He terminado de agregar mis materias</a>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- /Review Rating -->

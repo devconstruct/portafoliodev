@@ -1,0 +1,87 @@
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote-lite.min.js"></script>
+
+<div class="container youplay-store">
+  <br><br>
+  <div class="col-md-9">
+    <!-- Post Info -->
+    <article>
+      <form class="" action="/questions/savequestion/{{user.id}}" method="post">
+        {{#if user}}
+        <div class="container youplay-content" itemscope itemtype="http://schema.org/Question">
+          <div class="col-md-9">
+            <!-- Billing Information -->
+            <h2 class="mt-0" itemprop="name">Escribe tu pregunta</h2>
+            <div class="row">
+              <div class="col-md-12" itemscope itemtype="http://schema.org/Question">
+                <p itemprop="name">Titulo de la pregunta:</p>
+                <div class="youplay-input">
+                  <input type="text" name="titulo" placeholder="Titulo">
+                </div>
+              </div>
+            </div>
+
+            <textarea id="summernote" name="descripcion"></textarea>
+            <!-- /Billing Information -->
+            <br>
+            <button class="btn btn-success">
+              Publicar
+            </button>
+          </div>
+        </div>
+        {{/if}}
+      </form>
+    </article>
+  </div>
+
+  <!-- <div class="col-md-3"> -->
+    <div class="">
+    <div class="side-block">
+      <!--<h4 class="block-title">Popular Games</h4>-->
+      <div class="block-content p-0">
+        <!-- Single News Block -->
+        <div class="col-lg-3 col-md-4 ">
+              <div class="news-one">
+                  <a href="/contacto" class="angled-img">
+                      <div class="">
+                          <img src="/images/light/Anuncio1.png" alt="Anunciate en uvlum" width="600" height="300">
+                      </div>
+                  </a>
+              </div>
+          </div>
+        <!-- /Single News Block -->
+      </div>
+    </div>
+
+    <!-- Side Categories -->
+    <!--<div class="side-block">
+      <h4 class="block-title">Categories</h4>
+      <ul class="block-content">
+        <li><a href="#">All</a></li>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Adventure</a></li>
+        <li><a href="#">Casual</a></li>
+        <li><a href="#">Indie</a></li>
+        <li><a href="#">Racing</a></li>
+        <li><a href="#">RPG</a></li>
+        <li><a href="#">Simulation</a></li>
+        <li><a href="#">Strategy</a></li>
+      </ul>
+    </div>-->
+    <!-- /Side Categories -->
+  </div>
+</div>
+<script>
+$('#summernote').summernote({
+  placeholder: 'Escibe tu pregunta',
+  tabsize: 2,
+  height: 120,
+  toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'underline']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['insert', ['link', 'video']]
+  ]
+});
+</script>

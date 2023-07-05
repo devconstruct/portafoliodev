@@ -1,0 +1,860 @@
+<div class="content-wrap">
+  <br>
+  <div class="container youplay-content">
+
+    <div class="col-md-9">
+      {{#each no_calificadoT1}}
+<!--Inicio de No calificado 1er - 2do Año Trimestre 1-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="1" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Conocimiento del Medio:</p>
+            <div class="youplay-input">
+              <input type="number" name="cono_medio" placeholder="Conocimiento del Medio" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number" name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Fin de No calificado 1er - 2do Año Trimestre 1-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    <!-- </div> -->
+    <!-- ******************************************************************************** -->
+    <!-- <div class="col-md-9"> -->
+      {{#each no_calificadoT2}}
+      <!--Inicio de No calificado 1er - 2do Año Trimestre 2-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="2" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Conocimiento del Medio:</p>
+            <div class="youplay-input">
+              <input type="number" name="cono_medio" placeholder="Conocimiento del Medio" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number" name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Fin de No calificado 1er - 2do Año Bimestre 2-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    <!-- </div> -->
+    <!-- ******************************************************************************** -->
+    <!-- <div class="col-md-9"> -->
+      {{#each no_calificadoT3}}
+      <!--Inicio de No calificado 1er - 2do Año Bimestre 3-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="3" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Conocimiento del Medio:</p>
+            <div class="youplay-input">
+              <input type="number" name="cono_medio" placeholder="Conocimiento del Medio" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number"  name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Fin de No calificado 1er - 2do Año Bimestre 3-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    <!-- </div> -->
+    <!-- ******************************************************************************** -->
+    <!-- <div class="col-md-9"> -->
+      {{#each no_calificado3T1}}
+      <!--Inicio de No calificado 3er Año Trimestre 1-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="1" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Ciencias Naturales:</p>
+            <div class="youplay-input">
+              <input type="number" name="cien_naturales" placeholder="Ciencias Naturales" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Entidad Vivo:</p>
+            <div class="youplay-input">
+              <input type="number" name="enti_vivo" placeholder="Entidad Vivo" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">FoCE:</p>
+            <div class="youplay-input">
+              <input type="number" name="form_civ_etica" placeholder="FoCE" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number" name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number"  name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Fin de No calificado 3er Año Trimestre 1-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    <!-- </div> -->
+    <!-- ******************************************************************************** -->
+    <!-- <div class="col-md-9"> -->
+      {{#each no_calificado3T2}}
+      <!--Inicio de No calificado 3er Año Trimestre 2-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="2" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Ciencias Naturales:</p>
+            <div class="youplay-input">
+              <input type="number" name="cien_naturales" placeholder="Ciencias Naturales" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Entidad Vivo:</p>
+            <div class="youplay-input">
+              <input type="number" name="enti_vivo" placeholder="Entidad Vivo" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">FoCE:</p>
+            <div class="youplay-input">
+              <input type="number" name="form_civ_etica" placeholder="FoCE" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number" name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Fin de No calificado 3er Año Trimestre 2-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    <!-- </div> -->
+    <!-- ******************************************************************************** -->
+    <!-- <div class="col-md-9"> -->
+      {{#each no_calificado3T3}}
+      <!--Inicio de No calificado 3er Año Trimestre 3-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="3" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Ciencias Naturales:</p>
+            <div class="youplay-input">
+              <input type="number" name="cien_naturales" placeholder="Ciencias Naturales" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Entidad Vivo:</p>
+            <div class="youplay-input">
+              <input type="number" name="enti_vivo" placeholder="Entidad Vivo" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">FoCE:</p>
+            <div class="youplay-input">
+              <input type="number" name="form_civ_etica" placeholder="FoCE" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number"  name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Fin de No calificado 3er Año Trimestre 3-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    <!-- </div> -->
+    <!-- ******************************************************************************** -->
+    <!-- <div class="col-md-9"> -->
+      {{#each no_calificado_cuarto_sextoB1}}
+      <!--Inicio de No calificado 4to - 6to Año Trimestre 1-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="1" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Ciencias Naturales:</p>
+            <div class="youplay-input">
+              <input type="number" name="cien_naturales" placeholder="Ciencias Naturales" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Geografia:</p>
+            <div class="youplay-input">
+              <input type="number" name="geografia" placeholder="Geografia" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Historia:</p>
+            <div class="youplay-input">
+              <input type="number"  name="historia" placeholder="Historia" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Formación Civica y Etica:</p>
+            <div class="youplay-input">
+              <input type="number" name="form_civ_etica" placeholder="Formación Civica y Etica" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number" name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Inicio de No calificado 4to - 6to Año Trimestre 1-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    <!-- </div> -->
+    <!-- ******************************************************************************** -->
+    <!-- <div class="col-md-9"> -->
+      {{#each no_calificado_cuarto_sextoB2}}
+      <!--Inicio de No calificado 4to - 6to Año Trimestre 2-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="2" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Ciencias Naturales:</p>
+            <div class="youplay-input">
+              <input type="number" name="cien_naturales" placeholder="Ciencias Naturales" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Geografia:</p>
+            <div class="youplay-input">
+              <input type="number"  name="geografia" placeholder="Geografia" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Historia:</p>
+            <div class="youplay-input">
+              <input type="number" name="historia" placeholder="Historia" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Formación Civica y Etica:</p>
+            <div class="youplay-input">
+              <input type="number" name="form_civ_etica" placeholder="Formación Civica y Etica" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number" name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number"  name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Inicio de No calificado 4to - 6to Año Trimestre 2-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    <!-- </div> -->
+    <!-- ******************************************************************************** -->
+    <!-- <div class="col-md-9"> -->
+      {{#each no_calificado_cuarto_sextoB3}}
+      <!--Inicio de No calificado 4to - 6to Año Trimestre 3-->
+      <!-- Billing Information -->
+      <h2 class="mt-0">Calificar Alumno</h2>
+      <form action="/newcalificaciones/calificar/{{grado}}/{{id_matricula}}/{{id_escuela}}/{{grado}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" value="{{nombres}}" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <div class="col-md-12">
+            <p>Trimestre:</p>
+            <div class="youplay-input">
+              <input type="text" name="trimestre" value="3" readonly>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Español:</p>
+            <div class="youplay-input">
+              <input type="number" name="espanol" placeholder="Español" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Matematicas:</p>
+            <div class="youplay-input">
+              <input type="number" name="matematicas" placeholder="Matematicas" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Ciencias Naturales:</p>
+            <div class="youplay-input">
+              <input type="number" name="cien_naturales" placeholder="Ciencias Naturales" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Geografia:</p>
+            <div class="youplay-input">
+              <input type="number" name="geografia" placeholder="Geografia" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Historia:</p>
+            <div class="youplay-input">
+              <input type="number" name="historia" placeholder="Historia" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Formación Civica y Etica:</p>
+            <div class="youplay-input">
+              <input type="number" name="form_civ_etica" placeholder="Formación Civica y Etica" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Artes:</p>
+            <div class="youplay-input">
+              <input type="number" name="artes" placeholder="Artes" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Sociemocional:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_socioemocional" placeholder="Educación Socioemocional" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p itemprop="name">Educación Fisica:</p>
+            <div class="youplay-input">
+              <input type="number" name="edu_fisica" placeholder="Educación Fisica" required>
+            </div>
+          </div>
+        </div>
+        <!-- /Billing Information -->
+        <!--Inicio de No calificado 4to - 6to Año Trimestre 3-->
+        <div class="align-right">
+          <button class="btn btn-lg">
+            Guardar
+          </button>
+        </div>
+      </form>
+      {{/each}}
+    </div>
+    <!-- ******************************************************************************** -->
+
+    <!-- Right Side -->
+    <div class="col-md-3">
+
+
+      <!-- Side Search -->
+      <!--<div class="side-block">
+        <p>Search by Games:</p>
+        <form action="light-search.html">
+          <div class="youplay-input">
+            <input type="text" name="search" placeholder="enter search term">
+          </div>
+        </form>
+      </div>-->
+      <!-- /Side Search -->
+
+      <!-- Side Categories -->
+      <!--<div class="side-block">
+        <h4 class="block-title">Categories</h4>
+        <ul class="block-content">
+          <li><a href="#">All</a></li>
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Adventure</a></li>
+          <li><a href="#">Casual</a></li>
+          <li><a href="#">Indie</a></li>
+          <li><a href="#">Racing</a></li>
+          <li><a href="#">RPG</a></li>
+          <li><a href="#">Simulation</a></li>
+          <li><a href="#">Strategy</a></li>
+        </ul>
+      </div>-->
+      <!-- /Side Categories -->
+
+      <!-- Side Popular News -->
+      <div class="side-block">
+        <!--<h4 class="block-title">Popular Games</h4>-->
+        <div class="block-content p-0">
+          <div class="row youplay-side-news">
+            <div class="">
+              <a href="/contacto" class="angled-img">
+                <div class="">
+                  <img src="/images/light/Anuncio1.png" alt="Anunciate en uvlum" width="600" height="300">
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Single News Block -->
+          <!--<div class="row youplay-side-news">
+            <div class="col-xs-3 col-md-4">
+              <a href="light-store-product-1.html" class="angled-img">
+                <div class="img">
+                  <img src="/images/light/game-road-no-taken-500x375.jpg" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-9 col-md-8">
+              <h4 class="ellipsis"><a href="light-store-product-1.html" title="Road Not Taken">Road Not Taken</a></h4>
+              <span class="price">$50.00</span>
+            </div>
+          </div>-->
+          <!-- /Single News Block -->
+
+          <!-- Single News Block -->
+          <!--<div class="row youplay-side-news">
+            <div class="col-xs-3 col-md-4">
+              <a href="#" class="angled-img">
+                <div class="img">
+                  <img src="/images/light/game-botanicula-500x375.jpg" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-9 col-md-8">
+              <h4 class="ellipsis"><a href="#" title="Botanicula">Botanicula</a></h4>
+              <span class="price">$39.99 <sup><del>$49.99</del></sup></span>
+            </div>
+          </div>-->
+          <!-- /Single News Block -->
+
+          <!-- Single News Block -->
+          <!--<div class="row youplay-side-news">
+            <div class="col-xs-3 col-md-4">
+              <a href="#" class="angled-img">
+                <div class="img">
+                  <img src="/images/light/game-journey-500x375.jpg" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-9 col-md-8">
+              <h4 class="ellipsis"><a href="#" title="Journey">Journey</a></h4>
+              <span class="price">$20.00</span>
+            </div>
+          </div>-->
+          <!-- /Single News Block -->
+
+          <!-- Single News Block -->
+          <!--<div class="row youplay-side-news">
+            <div class="col-xs-3 col-md-4">
+              <a href="#" class="angled-img">
+                <div class="img">
+                  <img src="/images/light/game-world-of-goo-500x375.jpg" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-9 col-md-8">
+              <h4 class="ellipsis"><a href="#" title="World of Goo">World of Goo</a></h4>
+              <span class="price">$10.00</span>
+            </div>
+          </div>-->
+          <!-- /Single News Block -->
+        </div>
+      </div>
+      <!-- /Side Popular News -->
+
+      <!-- Instagram -->
+      <!--<div class="side-block">
+        <h4 class="block-title">Instagram</h4>
+        <div class="youplay-instagram row small-gap" data-instagram-user-id="2133360819"
+        ></div>
+      </div>-->
+      <!-- /Instagram -->
+
+    </div>
+    <!-- /Right Side -->
+
+  </div>
+
+</div>

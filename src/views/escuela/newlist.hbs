@@ -1,0 +1,90 @@
+<!--Inicio de Escuelas con enlaces de mapa curricular 2019-->
+<section class="youplay-banner banner-top youplay-banner-parallax">
+  <div class="image" data-speed="0.4" itemscope itemtype="http://schema.org/ImageObject">
+    <img class="jarallax-img" src="/images/light/game-journey-7-1920x1080.jpg" alt="Escuelas inscritas mapa curricular 2019" itemprop="contentUrl">
+  </div>
+
+  <div>
+    <div class="container">
+      <div class="info" itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+        <h2 class="fs-40 mt-45 text-center" itemprop="name">Estas escuelas son las que tienes inscritas con el Mapa Curricular 2019</h2>
+      </div>
+      <br>
+      <div class="youplay-features">
+        {{#each newescuela}}
+        <div class="col-sm-4">
+          <div class="feature angled-bg">
+            <i class="fas fa-school"></i>
+            <h3 itemprop="seller" itemscope itemtype="http://schema.org/Organization" itemprop="name">{{nom_escuela}}</h3>
+            <div>
+              {{grado}} "{{grupo}}"
+            </div>
+
+            <div class="description">
+              <div class="youplay-review-rating">
+                <div class="row">
+                  <div class="col-md-4" itemprop="customer" itemscope itemtype="http://schema.org/Person">
+                    <a href="/newmatricula/add/{{id_escuela}}"><i class="fas fa-chalkboard-teacher" aria-hidden="true" style="font-size:25px;"></i></a>
+                    <h6 itemprop="name">Agregar Alumno</h6>
+                  </div>
+                  <div class="col-md-4" itemprop="customer" itemscope itemtype="http://schema.org/Person">
+                    <a href="/newmatricula/{{id_escuela}}/{{grado}}"><i class="fas fa-id-card" aria-hidden="true" style="font-size:25px;"></i></a>
+                    <h6 itemprop="name">Lista de Alumno</h6>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="/newcalificaciones/{{id_escuela}}/{{grado}}"><i class="fas fa-list-ol" aria-hidden="true" style="font-size:25px;"></i></a>
+                    <h6>Calificaciones</h6>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="/escuela/edit/{{id_escuela}}"><i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:25px;"></i></a>
+                    <h6>Corregir</h6>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="#"><i class="far fa-trash-alt" aria-hidden="true" style="font-size:25px;" data-toggle="modal" data-target="#myModal{{id_esc}}"></i></a>
+                    <!-- <a href="/escuela/delete/{{id_escuela}}"><i class="far fa-trash-alt" aria-hidden="true" style="font-size:25px;"></i></a> -->
+                    <h6>Eliminar</h6>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- Modal para eliminar la escuela  -->
+        <div class="modal fade" id="myModal{{id_esc}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">¿En verdad quieres eliminar la escuela: {{nom_escuela}} ?</h4>
+              </div>
+              <div class="modal-body">
+                <span class="label label-danger">ADVERTENCIA!</span> Si eliminas la escuela "{{nom_escuela}}" se eliminará de todos los Mapas Curriculares Existentes, con ello la matricula y sus calificaciones.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <a href="/escuela/delete/{{id_esc}}">
+                  <button type="button" class="btn btn-primary">Si, Eliminar a: {{nom_escuela}}</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Modal para eliminar la escuela  -->
+        {{else}}
+        <div>
+          <div class="col-md-12 mx-auto">
+            <div class="card card-body text-center">
+              <p>No existe ninguna escuela por mostrar</p>
+              <a href="/escuela/add">Agregar escuela</a>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--Fin de Escuelas con enlaces de mapa curricular 2018-2019-->

@@ -1,0 +1,784 @@
+<!--Inicio de No calificado  Bimestre 1-->
+<!--Inicio para mostrar los datos del alumno-->
+{{#each no_calificadoP1}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <div class="form-group">
+            <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <label for="">Bimestre</label>
+            <input type="text" value="1" name="bimestre" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <input type="text" value="{{nombres}}" class="form-control" readonly>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de mostrar los datos del alumno-->
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center">Materias</h3>
+          <div class="form-group">
+            <table border="1">
+              <tr>
+                <th>id materias</th>
+                <th>id escuela</th>
+                <th>id matrcula</th>
+                <th>periodo</th>
+                <th>grado</th>
+                <th>Materia</th>
+                <th>Accion</th>
+              </tr>
+              {{#each listmaterias}}
+              <tr>
+                <th><input type="text" name="id_materias" value="{{id_materias}}" readonly></th>
+                <th><input type="text" name="id_escuela" value="{{id_escuela}}" readonly></th>
+                <th><input type="text" name="id_matricula" value="{{id_matricula}}" readonly></th>
+                <th><input type="text" name="periodo" value="1" readonly></th>
+                <th><input type="text" name="grado" value="{{grado}}" readonly></th>
+                <th><input type="text" name="materias" value="{{materias}}" readonly></th>
+                <th>
+                  <div class="form-group">
+                    <a href="/allcalificaciones/calif/{{id_materias}}" class="btn btn-secondary">Calificar</a>
+                  </div>
+                </th>
+              </tr>
+              {{/each}}
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center">Materias</h3>
+          <div class="form-group">
+            <table border="1">
+              <tr>
+                <th>id materias</th>
+                <th>id escuela</th>
+                <th>id matrcula</th>
+                <th>periodo</th>
+                <th>grado</th>
+                <th>Materia</th>
+                <th>calificacion</th>
+              </tr>
+              {{#each listmateriascalificar}}
+              <tr>
+                <th><input type="text" name="id_materias" value="{{id_materias}}" readonly></th>
+                <th><input type="text" name="id_escuela" value="{{id_escuela}}" readonly></th>
+                <th><input type="text" name="id_matricula" value="{{id_matricula}}" readonly></th>
+                <th><input type="text" name="periodo" value="1" readonly></th>
+                <th><input type="text" name="grado" value="{{grado}}" readonly></th>
+                <th><input type="text" name="materias" value="{{materias}}" readonly></th>
+                <th><input type="text" name="calificaciones" value="{{calificaciones}}" readonly></th>
+              </tr>
+              {{/each}}
+            </table>
+            <div class="">
+              <a href="/allcalificaciones/calificado/{{materiasurl.id_matricula}}/{{materiasurl.grado}}/{{materiasurl.id_escuela}}">Listo he terminado de calificar!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin de No calificado Bimestre 1-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Inicio de No calificado  Bimestre 2-->
+{{#each no_calificadoP2}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="3" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 2-->
+
+<!--Inicio de No calificado  Bimestre 3-->
+{{#each no_calificadoP3}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="3" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 3-->
+
+<!--Inicio de No calificado  Bimestre 4-->
+{{#each no_calificadoP4}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="4" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 4-->
+
+<!--Inicio de No calificado  Bimestre 5-->
+{{#each no_calificadoP5}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="5" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 5-->
+
+<!--Inicio de No calificado  Bimestre 6-->
+{{#each no_calificadoP6}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="6" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 6-->
+
+<!--Inicio de No calificado  Bimestre 7-->
+{{#each no_calificadoP7}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="7" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 7-->
+
+<!--Inicio de No calificado  Bimestre 8-->
+{{#each no_calificadoP8}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="8" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 8-->
+
+<!--Inicio de No calificado  Bimestre 9-->
+{{#each no_calificadoP9}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="9" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 9-->
+
+<!--Inicio de No calificado  Bimestre 10-->
+{{#each no_calificadoP10}}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <form action="/calificaciones/calificar/{{grado}}" method="post">
+            <div class="form-group">
+              <input type="text" value="{{id_matricula}}" name="id_matricula" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_escuela}}" name="id_escuela" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{grado}}" name="grado" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="">Bimestre</label>
+              <input type="text" value="10" name="bimestre" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_paterno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{apellido_materno}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{nombres}}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="espanol" value="{{espanol}}" placeholder="Español">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="matematicas" value="{{matematicas}}" placeholder="Matematicas">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cono_medio" value="{{cono_medio}}" placeholder="Conocimiento del Medio">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="cien_nat_tec" value="{{cien_nat_tec}}" placeholder="Ciencias Naturales">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="his_pais_conv" value="{{his_pais_conv}}" placeholder="Historia">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="artes" value="{{artes}}" placeholder="Artes">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_socio" value="{{edu_socio}}" placeholder="Educación Sociemocional">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="edu_fisica" value="{{edu_fisica}}" placeholder="Educación Fisica">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="ingles" value="{{ingles}}" placeholder="Ingles">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<!--Fin de No calificado Bimestre 10-->

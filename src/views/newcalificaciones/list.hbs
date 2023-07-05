@@ -1,0 +1,424 @@
+<div class="content-wrap no-banner">
+
+  <div class="container youplay-store store-grid">
+
+    <!-- Games List -->
+    <div class="col-md-9 isotope">
+
+      <!-- Sort Categories -->
+      <ul class="pagination isotope-options">
+        <li data-filter="all" class="active"><span>Todos</span></li>
+        <li data-filter="primero"><span>1er Trimestre</span></li>
+        <li data-filter="segundo"><span>2do Trimestre</span></li>
+        <li data-filter="tercero"><span>3er Trimestre</span></li>
+      </ul>
+      <!-- /Sort Categories -->
+
+      <div class="isotope-list row vertical-gutter">
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="primero">
+          <div class="container">
+            <!-- Tables -->
+            <div class="bottom-info">
+              <h4>Calificacione de 1er Trimestre</h4>
+            </div>
+            <!--Inico de calificaciones de primero-segundo 1er trimestre-->
+            {{#if listcalificacionesprimero_terceroT1}}
+            <a href="/graficas/2019/{{grafica1.id_escuela}}/{{grafica1.grado}}/1"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Conocimiento del Medio</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each listcalificacionesprimero_terceroT1}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cono_medio}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewprimero_segundo}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de calificaciones de primero-segundo 1er trimestre-->
+
+            <!--Inicio de calificaciones de tercero 1er trimestre-->
+            {{#if listcalificacionesterceroT1}}
+            <a href="/graficas/2019/{{grafica1.id_escuela}}/{{grafica1.grado}}/1"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Ciencias Naturales</th>
+                  <th itemprop="name">Entidad donde Vivo</th>
+                  <th itemprop="name">Formación Civica y Ética</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each listcalificacionesterceroT1}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cien_naturales}}</td>
+                  <td>{{enti_vivo}}</td>
+                  <td>{{form_civ_etica}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewtercero}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!-- /Tables -->
+
+            <!--Inicio de calificaciones de cuarto-sexto 1er trimestre-->
+            {{#if listcalificacionescuarto_sextoT1}}
+            <a href="/graficas/2019/{{grafica1.id_escuela}}/{{grafica1.grado}}/1"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Ciencias Naturales</th>
+                  <th itemprop="name">Geografía</th>
+                  <th itemprop="name">Historia</th>
+                  <th itemprop="name">Formación Civica y Ética</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each listcalificacionescuarto_sextoT1}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cien_naturales}}</td>
+                  <td>{{geografia}}</td>
+                  <td>{{historia}}</td>
+                  <td>{{form_civ_etica}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewcuarto_sexto}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!-- /Tables -->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="segundo">
+          <div class="container">
+            <!-- Tables -->
+            <div class="bottom-info">
+              <h4>Calificacione de 2do Trimestre</h4>
+            </div>
+            <!--Inico de calificaciones de primero-segundo 2do trimestre-->
+            {{#if listcalificacionesprimero_terceroT2}}
+            <a href="/graficas/2019/{{grafica2.id_escuela}}/{{grafica2.grado}}/2"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/2">Graficar 2do Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Conocimiento del Medio</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each listcalificacionesprimero_terceroT2}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cono_medio}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewprimero_segundo}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de calificaciones de primero-segundo 2do trimestre-->
+            <!-- /Tables -->
+
+            <!--Inicio de calificaciones de tercero 2do trimestre-->
+            {{#if listcalificacionesterceroT2}}
+            <a href="/graficas/2019/{{grafica2.id_escuela}}/{{grafica2.grado}}/2"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Ciencias Naturales</th>
+                  <th itemprop="name">Entidad donde Vivo</th>
+                  <th itemprop="name">Formación Civica y Ética</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each listcalificacionesterceroT2}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cien_naturales}}</td>
+                  <td>{{enti_vivo}}</td>
+                  <td>{{form_civ_etica}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewtercero}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+
+            <!--Inicio de calificaciones de cuarto-sexto 2do trimestre-->
+            {{#if listcalificacionescuarto_sextoT2}}
+            <a href="/graficas/2019/{{grafica2.id_escuela}}/{{grafica2.grado}}/2"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/2">Graficar 2do Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Ciencias Naturales</th>
+                  <th itemprop="name">Geografía</th>
+                  <th itemprop="name">Historia</th>
+                  <th itemprop="name">Formación Civica y Ética</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each listcalificacionescuarto_sextoT2}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cien_naturales}}</td>
+                  <td>{{geografia}}</td>
+                  <td>{{historia}}</td>
+                  <td>{{form_civ_etica}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewcuarto_sexto}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de calificaciones de cuarto-sexto 2do trimestre-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="tercero">
+          <div class="container">
+            <!-- Tables -->
+            <div class="bottom-info">
+              <h4>Calificacione de 3er Trimestre</h4>
+            </div>
+            <!--Inico de calificaciones de primero-segundo 3er bimestre-->
+            {{#if listcalificacionesprimero_terceroT3}}
+            <a href="/graficas/2019/{{grafica3.id_escuela}}/{{grafica3.grado}}/3"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/3">Graficar 3ro Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Conocimiento del Medio</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                  {{/if}}
+                </tr>
+              </thead>
+              <tbody>
+                {{#each listcalificacionesprimero_terceroT3}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cono_medio}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewprimero_segundo}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de calificaciones de primero-segundo 3er bimestre-->
+
+            <!--Inicio de calificaciones de tercero 3er trimestre-->
+            {{#if listcalificacionesterceroT3}}
+            <a href="/graficas/2019/{{grafica3.id_escuela}}/{{grafica3.grado}}/3"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Ciencias Naturales</th>
+                  <th itemprop="name">Entidad donde Vivo</th>
+                  <th itemprop="name">Formación Civica y Ética</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each listcalificacionesterceroT3}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cien_naturales}}</td>
+                  <td>{{enti_vivo}}</td>
+                  <td>{{form_civ_etica}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewtercero}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+
+            <!--Inicio de calificaciones de cuarto-sexto 3er trimestre-->
+            {{#if listcalificacionescuarto_sextoT3}}
+            <a href="/graficas/2019/{{grafica3.id_escuela}}/{{grafica3.grado}}/3"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/3">Graficar 3er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+                  <th itemprop="name">Nombre</th>
+                  <th itemprop="name">Español</th>
+                  <th itemprop="name">Matemáticas</th>
+                  <th itemprop="name">Ciencias Naturales</th>
+                  <th itemprop="name">Geografía</th>
+                  <th itemprop="name">Historia</th>
+                  <th itemprop="name">Formación Civica y Ética</th>
+                  <th itemprop="name">Artes</th>
+                  <th itemprop="name">Educación Socioemocinal</th>
+                  <th itemprop="name">Educación Fisica</th>
+                  <th>Promedio</th>
+                  <th>Acciones</th>
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each listcalificacionescuarto_sextoT3}}
+                <tr>
+                  <td>{{nombres}}</td>
+                  <td>{{espanol}}</td>
+                  <td>{{matematicas}}</td>
+                  <td>{{cien_naturales}}</td>
+                  <td>{{geografia}}</td>
+                  <td>{{historia}}</td>
+                  <td>{{form_civ_etica}}</td>
+                  <td>{{artes}}</td>
+                  <td>{{edu_socioemocional}}</td>
+                  <td>{{edu_fisica}}</td>
+                  <td>{{P}}</td>
+                  <td><a href="/newcalificaciones/edit/{{grado}}/{{idnewcuarto_sexto}}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de calificaciones de cuarto-sexto 3er bimestre-->
+
+            <!-- /Tables -->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+      </div>
+
+    </div>
+    <!-- /Games List -->
+
+  </div>
+
+</div>
+<style>
+.colorlike {color:green;}
+.colorpastel {color:red;}
+.colorbarra {color:blue;}
+</style>

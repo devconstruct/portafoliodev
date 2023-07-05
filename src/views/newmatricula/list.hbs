@@ -1,0 +1,113 @@
+<div class="container youplay-content">
+  <br>
+  <h2 class="h1">Lista de Alumnos</h2>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Botones de Acción <span class="icon-plus"></span>
+          </a>
+        </h4>
+      </div>
+      <div class="content" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <a id="downloadLink" onclick="exportF(this)"><i class="fa fa-file-excel-o colorlike" aria-hidden="true" itemprop="name"></i> Descargar lista de alumnos</a>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <div class="description">
+            <div class="row">
+              <div class="col-md-2">
+                <i class="fa fa-calculator" aria-hidden="true" style="font-size:25px;"></i>
+                <h6>Calificar Alumno</h6>
+              </div>
+              <div class="col-md-2">
+                <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:25px;"></i>
+                <h6>Modificar Alumno</h6>
+              </div>
+              <div class="col-md-2">
+                <i class="far fa-trash-alt" aria-hidden="true" style="font-size:25px;"></i>
+                <h6>Eliminar Alumno</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-hover" id="table">
+    <thead>
+      <tr>
+        <th>Nombre(s)</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each matricula}} <!--Verificar esta parte ya que si no existe alumno, muestra los th de a. paterno,materno,nombre y acciones-->
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <td class="col-md-9" itemprop="name">{{nombres}}</td>
+        <td>
+          <div class="col-md-2">
+            <a href="/newcalificaciones/calificado/{{id_matricula}}/{{grado}}"><i class="fa fa-calculator" aria-hidden="true" style="font-size:25px;"></i></a>
+          </div>
+          <div class="col-md-2">
+            <a href="/newmatricula/edit/{{id_matricula}}/{{grado}}"><i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:25px;"></i></a>
+          </div>
+          <div class="col-md-2">
+            <!-- <a href="/newmatricula/delete/{{id_matricula}}/{{id_escuela}}/{{grado}}" class="btn btn-danger">Eliminar Alumno</a> -->
+            <a href="#"><i class="far fa-trash-alt" aria-hidden="true" style="font-size:25px;" data-toggle="modal" data-target="#myModal{{id_matri}}{{id_escuela}}{{grado}}"></i></a>
+          </div>
+        </td>
+      </tr>
+      <!-- Modal para eliminar alumno  -->
+      <div class="modal fade" id="myModal{{id_matri}}{{id_escuela}}{{grado}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">¿Eliminar al alumno: {{nombres}}  ?</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              <a href="/newmatricula/delete/{{id_matri}}/{{id_escuela}}/{{grado}}">
+                <button type="button" class="btn btn-primary">Si, Eliminar a: {{nombres}}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Modal para eliminar alumno  -->
+      {{else}}
+      {{#if matriculadd}}
+      <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="mt-0">No existe ninguna matricula por mostrar, ingresa a 1 alumno</h3>
+            <ul>
+              <li><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/newmatricula/add/{{addmatricula.id_escuela}}">Agregar Alumno</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+      {{/if}}
+      {{/each}}
+    </tbody>
+  </table>
+
+</div>
+<script>
+function exportF(elem) {
+  var table = document.getElementById("table");
+  var html = table.outerHTML;
+  var url = 'data:application/vnd.ms-excel,' + escape(html);
+  elem.setAttribute("href", url);
+  elem.setAttribute("download", "listalumnos.xls");
+  return false;
+}
+</script>
+<style>
+  .colorlike {color:green;}
+</style>

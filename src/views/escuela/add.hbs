@@ -1,0 +1,39 @@
+<div class="content-wrap no-banner">
+  <div class="container youplay-news youplay-post">
+    <div class="align-center">
+
+      <div class="">
+        <div class="card">
+          <div class="card-body" itemscope itemtype="http://schema.org/ItemList">
+            <form action="/escuela/add" method="post">
+              <p itemprop="name">Escribe el nombre de la escuela, su grado y grupo donde impartes clase.</p>
+              <div class="form-group">
+                <input type="text" class="form-control" name="nom_escuela" placeholder="Nombre Escuela" autofocus required>
+              </div>
+              <div class="form-group">
+                <p>Grado</p>
+                <select class="form-control" name="grado" placeholder="Grado" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="grupo" placeholder="Grupo" required>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-success btn-block">
+                  Guardar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

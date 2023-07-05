@@ -1,0 +1,204 @@
+<section class="youplay-banner banner-top youplay-banner-parallax small">
+  {{#each profile}}
+  <div class="image" data-speed="0.4">
+    <img src="/images/profile/{{profileimagesecond}}" alt="" class="jarallax-img">
+  </div>
+  <div class="youplay-rating pull-right col-md-1">
+    <a href="#" class="" data-toggle="modal" data-target="#profilsecundario">
+      <label for="review-rate-1"><i class="fa fa-pencil"></i></label>
+    </a>
+
+  </div>
+
+  <div class="youplay-user-navigation">
+    <div class="container">
+      <ul>
+        <li class="active"><a href="light-user-activity.html">Perfil</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info">
+    <div>
+      <div class="container youplay-user">
+        <a href="#" class="angled-img" data-toggle="modal" data-target="#profilprincipal">
+          <div class="img">
+            <img src="/images/profile/{{profileimage}}" height="150px"alt="">
+          </div>
+          <i class="fa fa-search-plus icon"></i>
+        </a>
+        <div class="user-data">
+          <h2>{{nombre}} {{apellido}}</h2>
+          <div class="location">Actividad</div>
+          <div class="activity">
+            <div>
+              <div class="num"><a href="/profile/myquestion/{{id}}/{{token}}">{{../myquestion.duda}}</a></div>
+              <div class="title">Preguntas</div>
+            </div>
+            <div>
+              <div class="num"><a href="/profile/myanswer/{{id}}/{{token}}">{{../myanswer.educar}}</a></div>
+              <div class="title">Respuestas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /Banner -->
+<div class="container youplay-content">
+
+  <div class="row">
+
+    <div class="col-md-9">
+      <br>
+      <div class="">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <a href="#" data-toggle="modal" data-target="#mydates"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="mydates" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Perfil</h4>
+              </div>
+              <div class="modal-body">
+                <form class="" action="/profile/datosgenerales/{{id}}/{{token}}" method="post">
+                <div class="row">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <p>Nombre:</p>
+                      <div class="youplay-input">
+                        <input type="text" name="nombre" placeholder="nombre" value="{{nombre}}">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Apellidos:</p>
+                      <div class="youplay-input">
+                        <input type="text" name="apellido" placeholder="Apellidos" value="{{apellido}}">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Email:</p>
+                      <div class="youplay-input">
+                        <input type="text" name="username" placeholder="Email" value="{{username}}">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Nivel Educativo:</p>
+                    <div class="youplay-input">
+                      <input type="text" name="niveleducativo" placeholder="Nivel Educativo" value="{{niveleducativo}}">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Plantel Educativo:</p>
+                    <div class="youplay-input">
+                      <input type="text" name="institucion" placeholder="Plantel Educativo" value="{{institucion}}">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button class="btn btn-success">Guardar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- /Modals -->
+
+      </div>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td style="width: 200px;"><p>Nombre:</p></td>
+            <td><p>{{nombre}} {{apellido}}</p></td>
+          </tr>
+          <tr>
+            <td><p>Email:</p></td>
+            <td><p>{{username}}</p></td>
+          </tr>
+          <tr>
+            <td><p>Nivel Educativo:</p></td>
+            <td><p>{{niveleducativo}}</p></td>
+          </tr>
+          <tr>
+            <td><p>Plantel Educativo:</p></td>
+            <td><p>{{institucion}}</p></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Modal profil principal -->
+      <div class="modal fade" id="profilprincipal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="" action="/profile/profileimage/{{id}}/{{token}}" method="post" enctype="multipart/form-data">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Imagen de Perfil</h4>
+              </div>
+              <div class="modal-body">
+
+                <div class="image text-center" data-speed="0.4">
+                  <img src="/images/profile/{{profileimage}}" width="200" height="200">
+                </div>
+
+                <input type="file" name="profileimage" value="" required>
+
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button class="btn btn-success">
+                  Publicar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- /Modals profil principal -->
+      <!-- Modal profil secundario -->
+      <div class="modal fade" id="profilsecundario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="" action="/profile/profileimagesecont/{{id}}/{{token}}" method="post" enctype="multipart/form-data">
+            <div class="modal-content">
+              <div class="modal-body">
+
+                <div class="image text-center" data-speed="0.4">
+                  <img src="/images/profile/{{profileimagesecond}}" height="160" width="1400">
+                </div>
+
+                <input type="file" name="profileimagesecond" value="" required>
+
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button class="btn btn-success">
+                  Publicar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- /Modals profil secundario -->
+      {{/each}}
+    </div>
+
+    <br>
+
+  </div>
+
+</div>

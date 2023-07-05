@@ -1,0 +1,484 @@
+<!--Inicio para Mostrar el nombre y datos generales del alumno-->
+<!-- *********************DEJAR ESTE PARA TODOS LOS NIVELES******************* -->
+<br>
+{{#each allumnos}}
+<div class="container">
+  <h2 class="h1">Alumno</h2>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Grado</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{grado}}</td>
+        <td>{{nombres}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{/each}}
+<!-- *********************DEJAR ESTE PARA TODOS LOS NIVELES******************* -->
+<!--Fin para Mostrar el nombre ydatos generales del alumno-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 1-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP1 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/1/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 1</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP1}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_1}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 1er Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/1/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Fin para mostrar materias y calificaciones del alumnos Periodo 1-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 2-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP2 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/2/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 2</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP2}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_2}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 2do Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/2/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Fin para mostrar materias y calificaciones del alumnos Periodo 2-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 3-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP3 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/3/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 3</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP3}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_3}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 3er Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/3/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Fin para mostrar materias y calificaciones del alumnos Periodo 3-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 4-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP4 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/4/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 4</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP4}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_4}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 4to Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/4/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Fin para mostrar materias y calificaciones del alumnos Periodo 4-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 5-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP5 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/5/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 5</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP5}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_5}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 5to Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/5/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Fin para mostrar materias y calificaciones del alumnos Periodo 5-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 6-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP6 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/6/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 6</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP6}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_6}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 6to Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/6/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Fin para mostrar materias y calificaciones del alumnos Periodo 6-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 7-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP7 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/7/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 7</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP7}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_7}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 7mo Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/7/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 7-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 8-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP8 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/8/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 8</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP8}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_8}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 8vo Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/8/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Fin para mostrar materias y calificaciones del alumnos Periodo 8-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 9-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP9 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/9/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 9</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP9}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_9}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 9no Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/9/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 9-->
+
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 10-->
+<div class="container">
+  <table class="table table-bordered table-hover">
+    {{#if allTodoP10 }}
+    <div class="container">
+      <a href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/10/{{porcalificar.id_escuela}}">Mostrar todas las calificaciones Bimestre 10</a>
+    </div>
+
+    <thead>
+      <tr itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <th>Periodo</th>
+        <th>Materia</th>
+        <th itemprop="name">Calificacion</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    {{/if}}
+    {{#each allTodoP10}}
+    <tbody>
+      <tr>
+        <td>{{periodo}}</td>
+        <td>{{materias}}</td>
+        <td>{{calificaciones}}</td>
+        <td><a href="/allcalificaciones/edit/{{id_calificaciones}}">Editar</a></td>
+      </tr>
+    </tbody>
+    {{else}}
+    {{#if calificar_all_10}}
+    <!-- Review Rating -->
+      <div class="youplay-review-rating align-center">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 10mo Bimestre</h3>
+            <ul>
+              <li itemprop="name"><i class="fa fa-plus-circle"></i> <a class="btn btn-lg" href="/allcalificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/10/{{porcalificar.id_escuela}}">Calificar a {{porcalificar.nombres}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Review Rating -->
+    {{/if}}
+    {{/each}}
+  </table>
+</div>
+<!--Inicio para mostrar materias y calificaciones del alumnos Periodo 10-->

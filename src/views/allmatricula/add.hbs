@@ -1,0 +1,59 @@
+<div class="content-wrap banner-top">
+
+  <div class="container youplay-content">
+
+    <div class="col-md-9">
+      <br>
+      <!-- Billing Information -->
+      <h2 class="mt-0">Agregar Alumno</h2>
+      <div class="container col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+        <blockquote itemprop="name">No quieres ingresar el nombre de tus alumnos uno por uno? <p>Copia y pega el nombre de tus alumnos una sola vez y automática apareceran en tu lista.</p> <strong><a href="/allmatricula/allupstudent/{{escuela.id_escuela}}">Click aqui: Agregar Alumnos</a></strong></blockquote>
+      </div>
+
+      <form class="" action="/allmatricula/add/{{escuela.id_escuela}}/411/{{escuela.grado}}" method="post">
+        <div class="row">
+          <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+            <p itemprop="name">Nombre(s):</p>
+            <div class="youplay-input">
+              <input type="text" name="nombres" placeholder="Nombre(s)" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- /Billing Information -->
+
+        <!-- Order Button -->
+        <div class="align-right">
+          <button class="btn btn-lg">Guardar Alumno</button>
+        </div>
+        <!-- /Order Button -->
+      </form>
+    </div>
+
+    <!-- Right Side -->
+    <!-- <div class="col-md-3"> -->
+    <div class="">
+      <!-- Side Popular News -->
+      <div class="side-block">
+        <!--<h4 class="block-title">Popular Games</h4>-->
+        <div class="block-content p-0">
+          <!-- Single News Block -->
+          <div class="col-lg-3 col-md-4 ">
+                <div class="news-one">
+                    <a href="/contacto" class="angled-img">
+                        <div class="">
+                            <img src="/images/light/Anuncio1.png" alt="Anunciate en uvlum" width="600" height="300">
+                        </div>
+                    </a>
+                </div>
+            </div>
+          <!-- /Single News Block -->
+        </div>
+      </div>
+      <!-- /Side Popular News -->
+    </div>
+    <!-- /Right Side -->
+
+  </div>
+
+</div>

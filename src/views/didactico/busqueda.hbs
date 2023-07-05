@@ -1,0 +1,348 @@
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote-lite.min.js"></script>
+<div class="container youplay-search" itemtype = "http://schema.org/WebPage">
+  <div class="row">
+    <h2 itemscope itemtype="http://schema.org/CreativeWork" itemprop ="name">Material Didactico</h2>
+    <form action="/didactico/busqueda" method="post">
+      <div class="youplay-input">
+        <input type="text" name="searkey" placeholder="Buscar Material Didáctico..." autofocus>
+      </div>
+    </form>
+    {{#if user}}
+    <p itemscope itemtype="http://schema.org/CreativeWork" itemprop ="name">Compartir Material Didactico:<a href="#" data-toggle="modal" data-target="#myModal">Clic aqui!</a></p>
+    <!-- Modal Material Didactico -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" itemscope itemtype="http://schema.org/CreativeWork">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel" itemprop ="name">Que tipo de Material Didactico quieres publicar?</h4>
+          </div>
+          <div class="modal-body">
+            <!-- Accordion -->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title" itemscope itemtype="http://schema.org/CreativeWork">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" itemprop="name">
+                      Material Didactico CON ARCHIVO <span class="icon-plus"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <form action="/didactico/fileMDidactico/{{user.id}}" method="post" enctype="multipart/form-data">
+                      <div class="row" itemscope itemtype="http://schema.org/CreativeWork">
+                        <div class="col-md-4" itemprop="name">
+                          <p>Nombre:</p>
+                          <div class="youplay-input">
+                            <input type="text" name="titulo" placeholder="Nombre" required>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <p>Procedencia:</p>
+                          <div class="youplay-input">
+                            <input type="text" name="empresa" placeholder="Lugar de Origen" required>
+                          </div>
+                        </div>
+                        <div class="col-md-4" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <p>Precio:</p>
+                          <div class="youplay-input" itemprop="price">
+                            <input type="text" name="precio" placeholder="$10.00 - Gratis" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <p>Tipo de Material:</p>
+                            <label class="youplay-select">
+                              <select name="tipo_archivo">
+                                <option value="word">Word</option>
+                                <option value="excel">Excel</option>
+                                <option value="pp">Power Point</option>
+                                <option value="pdf">PDF</option>
+                                <option value="otro">Otro</option>
+                              </select>
+                            </label>
+                          </div>
+                          <div class="col-md-6" itemprop="additionalType">
+                            <p>Subir Archivo:</p>
+                            <div class="youplay-input">
+                              <input type="file" name="file" required>
+                            </div>
+                          </div>
+                        </div>
+                        <p>Descripción:</p>
+                        <!--<div class="youplay-textarea" itemprop = "description">-->
+                          <!--<textarea name="descripcion" rows="5" placeholder="Escribe una descripción o instrucciones necesarias (OPCIONAL)"></textarea>-->
+                          <textarea id="summernote" name="descripcion"></textarea>
+                        <!--</div>-->
+                        <span class="label label-danger">Advertencia</span><p itemprop = "description">Entendemos que es posible cometer errores y que no pretendes infringir nuestras políticas.
+                          Si tu contenido es violento u ofencivo sera eliminado, y tu cuenta personal BANEADA.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                          <button class="btn btn-success">
+                            Publicar
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo" >
+                    <h4 class="panel-title" itemscope itemtype="http://schema.org/CreativeWork">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" itemprop = "name">
+                        Material Didactico SIN ARCHIVO <span class="icon-plus"></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      <form action="/didactico/sinfileMDidactico/{{user.id}}" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                          <div class="col-md-4" itemprop = "name" itemscope itemtype="http://schema.org/CreativeWork">
+                            <p>Nombre:</p>
+                            <div class="youplay-input">
+                              <input type="text" name="titulo" placeholder="Nombre" required>
+                            </div>
+                          </div>
+                          <div class="col-md-4" itemscope itemtype="http://schema.org/Review">
+                            <p>Procedencia:</p>
+                            <div class="youplay-input">
+                              <input type="text" name="empresa" placeholder="Lugar de Origen" itemprop="author" required>
+                            </div>
+                          </div>
+                          <div class="col-md-4" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                            <p>Precio:</p>
+                            <div class="youplay-input" itemprop="price">
+                              <input type="text" name="precio" placeholder="$10.00 - Gratis" required>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <p>Tipo de Material:</p>
+                              <label class="youplay-select">
+                                <select name="tipo_archivo">
+                                  <option value="word">Word</option>
+                                  <option value="excel">Excel</option>
+                                  <option value="pp">Power Point</option>
+                                  <option value="pdf">PDF</option>
+                                  <option value="otro">Otro</option>
+                                </select>
+                              </label>
+                            </div>
+                          </div>
+                          <p>Descripción:</p>
+                          <!--<div class="youplay-textarea" itemprop = "description">-->
+                            <!--<textarea name="descripcion" rows="5" placeholder="Escribe una descripción o instrucciones necesarias (OPCIONAL)"></textarea>-->
+                            <textarea id="summernote2" name="descripcion"></textarea>
+                          <!--</div>-->
+                          <span class="label label-danger">Advertencia</span><p itemprop = "description">Entendemos que es posible cometer errores y que no pretendes infringir nuestras políticas.
+                            Si tu contenido es violento u ofencivo sera eliminado, y tu cuenta personal BANEADA.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            <button class="btn btn-success">
+                              Publicar
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Accordion -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Modals Material Didactico -->
+        <div class="col-md-12">
+          <!--Inicio donde inicia el each-->
+          {{#each matdidactico}}
+          <div class="col-md-6">
+            <div class="">
+              <ul class="youplay-forum">
+                <li class="body">
+                  <ul>
+
+                  <li class="cell-info">
+                    <a href="#" data-toggle="modal" data-target="#matdidactico{{id_matdidactico}}" class="title h4" itemprop = "name" itemscope itemtype="http://schema.org/CreativeWork">{{titulo}}</a>
+                    <div itemprop="author" itemscope itemtype="http://schema.org/Review" class="description">{{empresa}}</div>
+                    <ul class="forums-list" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                      <li itemprop="price">Precio:${{precio}}</li>
+                    </ul>
+                  </li>
+                  <li class="cell-topic-count">
+                    <form action="/didactico/gusta/{{id_matdidactico}}/{{gusta}}" method="post">
+                      <button type="submit">
+                        <i class="fa fa-heart-o colorlike" aria-hidden="true"></i>
+                      </button>
+                    </form>
+                    {{gusta}}
+                  </li>
+                  <li class="cell-topic-count">
+                    <form action="/didactico/nogusta/{{id_matdidactico}}/{{disgusta}}" method="post">
+                      <button type="submit">
+                        <i class="fa fa-thumbs-o-down colordislike" aria-hidden="true"></i>
+                      </button>
+                    </form>
+                    {{disgusta}}
+                  </li>
+                  <li class="cell-freshness" itemscope itemtype="http://schema.org/Question">
+                    <p itemprop="dateCreated"> {{timeago created_at}}</p>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- Modal ver Material Didactico -->
+    <div class="modal fade" id="matdidactico{{id_matdidactico}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 itemprop = "name" itemscope itemtype="http://schema.org/CreativeWork" class="modal-title" id="myModalLabel">{{titulo}}</h4>
+            <span class="date pull-right" itemprop="dateCreated" itemscope itemtype="http://schema.org/Question"><i class="fa fa-calendar"></i> {{timeago created_at}}</span>
+            <span><i class="fa fa-heart-o colorlike" aria-hidden="true"></i> {{gusta}}
+              <i class="fa fa-thumbs-o-down colordislike" aria-hidden="true"></i> {{disgusta}}</span>
+            </div>
+            <div class="modal-body">
+              <div class="description">
+                <p itemscope="" itemtype="http://schema.org/Book">
+                  <b itemprop="description">{{{descripcion}}}</b>
+                </p>
+                <p>Descargar: <a href="/didactico/descargar/{{file}}" itemscope itemtype="http://schema.org/Question" itemprop = "name">{{titulo}}</a></p>
+                <div class="col-md-6" itemscope itemtype="http://schema.org/Review">
+                  <i class="fa fa-tags" itemprop="author"></i> Ofrecido por: {{empresa}}
+                </div>
+                <div class="col-md-6" itemprop="value" itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemprop="price">
+                  <i class="fa fa-money colormoney" aria-hidden="true"></i> Precio:${{precio}}
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Modals ver Material Didactico -->
+      {{/each}}
+      <!--Fin donde inicia el each-->
+
+    </div>
+    {{else}}
+    <div class="col-md-12">
+      <!--Inicio donde inicia el each-->
+      {{#each matdidactico}}
+      <div class="col-md-6">
+        <div class="">
+          <ul class="youplay-forum">
+            <li class="body">
+              <ul>
+              <li class="cell-info">
+                <a href="#" data-toggle="modal" data-target="#matdidacticopublic{{id_matdidactico}}" class="title h4" itemprop="name">{{titulo}}</a>
+                <div class="description" itemprop="author" itemscope itemtype="http://schema.org/Review">{{empresa}}</div>
+                <ul class="forums-list" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <li itemprop="price">Precio:${{precio}}</li>
+                </ul>
+              </li>
+              <li class="cell-topic-count" data-toggle="tooltip" data-placement="top" title="Para calificar este elemento debes registrarte"><i class="fa fa-heart-o colorlike" aria-hidden="true"></i> {{gusta}}</li>
+              <li class="cell-reply-count" data-toggle="tooltip" data-placement="top" title="Para calificar este elemento debes registrarte"><i class="fa fa-thumbs-o-down colordislike" aria-hidden="true"></i> {{disgusta}}</li>
+              <li class="cell-freshness">
+                <p itemprop="datePublished">{{timeago created_at}}</p>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</div>
+<!-- Modal ver Material Didactico -->
+<div class="modal fade" id="matdidacticopublic{{id_matdidactico}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" itemscope itemtype="http://schema.org/Question">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" itemprop="name">{{titulo}}</h4>
+        <span class="date pull-right"><i class="fa fa-calendar" itemprop="dateCreated"></i> {{timeago created_at}}</span>
+        <span><i class="fa fa-heart-o colorlike" aria-hidden="true"></i> {{gusta}}
+          <i class="fa fa-thumbs-o-down colordislike" aria-hidden="true"></i> {{disgusta}}</span>
+        </div>
+        <div class="modal-body">
+          <div class="description" itemscope itemtype="http://schema.org/Product">
+            <p>
+              <b itemprop="description">{{{descripcion}}}</b>
+            </p>
+            <p>Descargar: <a href="/didactico/descargar/{{file}}" itemprop="name">{{titulo}}</a></p>
+            <div class="col-md-6" itemprop="review" itemscope itemtype="http://schema.org/Review">
+              <i class="fa fa-tags" itemprop="author"></i> Ofrecido por: {{empresa}}
+            </div>
+            <div class="col-md-6" itemscope itemtype="http://schema.org/Product">
+              <i class="fa fa-money colormoney" itemprop="price" aria-hidden="true"></i> Precio:${{precio}}
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Modals ver Material Didactico -->
+  {{/each}}
+  <!--Fin donde inicia el each-->
+</div>
+
+{{/if}}
+
+</div>
+
+</div>
+
+<style media="screen">
+.colorlike {color:red;}
+.colordislike {color:black;}
+.colormoney {color:green}
+
+button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+</style>
+<script>
+$('#summernote').summernote({
+  placeholder: 'Material Didáctico',
+  tabsize: 2,
+  height: 120,
+  toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'underline']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['insert', ['link', 'video']]
+  ]
+});
+</script>
+<script>
+$('#summernote2').summernote({
+  placeholder: 'Material Didáctico',
+  tabsize: 2,
+  height: 120,
+  toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'underline']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['insert', ['link', 'video']]
+  ]
+});
+</script>

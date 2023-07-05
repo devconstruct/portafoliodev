@@ -1,0 +1,455 @@
+<div class="content-wrap no-banner">
+
+  {{#if listmateriasP1}}
+  <div class="container youplay-content">
+    <!-- <label id="resultado" name="id_materias"></label> -->
+    <input type="hidden" id="resultado" name="id_materias">
+    <form action="/allcalificaciones/listcalificaciones" method="POST">
+      <input type="hidden" name="id_escuela" value="{{listmateriasP2.id_escuela}}">
+      <input type="hidden" name="grado" value="{{listmateriasP2.grado}}">
+      <label class="youplay-select">
+        <select id ="id_materias" name="id_materias" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+          <option value="id_materias" itemprop="name">Selecciona la materia</option>
+          {{#each listmateriasP1}}
+          <option value="{{id_materias}}">{{materias}}</option>
+          {{/each}}
+        </select>
+      </label>
+      <input type="submit" value="Buscar">
+    </form>
+  </div>
+  {{else}}
+  <div class="comment-cont clearfix container" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+    <p class="comment-author h4" itemprop="name">Para ver las calificaciones y poder graficar debes agregar las materias.</p>
+    <i class="fa fa-star-o" aria-hidden="true"></i> <a href="/materias/{{addmaterias.id_escuela}}/{{addmaterias.grado}}">Agregra materias</a>
+  </div>
+  {{/if}}
+
+  <div class="container youplay-store store-grid">
+
+    <!-- Games List -->
+    <div class="col-md-9 isotope">
+
+      <!-- Sort Categories -->
+      <ul class="pagination isotope-options">
+        <li data-filter="all" class="active"><span>Todos</span></li>
+        <li data-filter="primero"><span>1er Bimestre</span></li>
+        <li data-filter="segundo"><span>2do Bimestre</span></li>
+        <li data-filter="tercero"><span>3er Bimestre</span></li>
+        <li data-filter="cuarto"><span>4to Bimestre</span></li>
+        <li data-filter="quinto"><span>5to Bimestre</span></li>
+        <li data-filter="sexto"><span>6to Bimestre</span></li>
+        <li data-filter="septimo"><span>7mo Bimestre</span></li>
+        <li data-filter="octavo"><span>8vo Bimestre</span></li>
+        <li data-filter="noveno"><span>9no Bimestre</span></li>
+        <li data-filter="decimo"><span>10mo Bimestre</span></li>
+      </ul>
+      <!-- /Sort Categories -->
+
+      <div class="isotope-list row vertical-gutter">
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="primero">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal1}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 1er Periodo</h4>
+            </div>
+            <!--Inico de 1er Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/1"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal1}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{else}}
+                <p itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><b itemprop="name">SELECCIONA UNA MATERIA</b> y presiona <b>BUSCAR</b> de la parte superior para visualizar tu lista.</p>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 1er Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="segundo">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal2}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 2do Periodo</h4>
+            </div>
+            <!--Inico de 2do Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/2" itemprop="name" itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal2}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 2do Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="tercero">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal3}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 3er Periodo</h4>
+            </div>
+            <!--Inico de 3er Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/3" itemprop="name" itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal3}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 3er Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="cuarto">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal4}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 4to Periodo</h4>
+            </div>
+            <!--Inico de 4to Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/4" itemprop="name" itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal4}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 4to Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="quinto">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal5}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 5to Periodo</h4>
+            </div>
+            <!--Inico de 5to Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/5" itemprop="name" itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal5}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 5to Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="sexto">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal6}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 6to Periodo</h4>
+            </div>
+            <!--Inico de 6to Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/6" itemprop="name" itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal6}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 6to Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="septimo">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal7}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 7mo Periodo</h4>
+            </div>
+            <!--Inico de 7mo Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/7" itemprop="name" itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal7}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 7mo Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="octavo">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal8}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 8vo Periodo</h4>
+            </div>
+            <!--Inico de 8vo Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/8">Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal8}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 8vo Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="noveno">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal9}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 9no Periodo</h4>
+            </div>
+            <!--Inico de 9no Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/9" itemprop="name" itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal9}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 9no Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+        <!-- Single Product Block -->
+        <div class="item col-lg-12 col-md-12 col-xs-12" data-filters="decimo">
+          <div class="container">
+            <!-- Tables -->
+            {{#if matcal10}}
+            <div class="bottom-info" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+              <h4 itemprop="name">Calificacione de 10mo Periodo</h4>
+            </div>
+            <!--Inico de 10mo Periodo-->
+            <a href="/graficas/all/{{listmateriasG.id_escuela}}/{{listmateriasG.id_materias}}/10" itemprop="name" itemscope itemtype="http://schema.org/EducationalOccupationalCredential"><i class="fa fa-pie-chart colorpastel" aria-hidden="true"></i> Graficar</a>
+            <!-- <a href="/graficas/{{id_escuela}}/{{grado}}/1">Graficar 1er Bimestre</a> -->
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Periodo</th>
+                  <th>Nombre</th>
+                  {{#each listmateriasP3}}
+                  <th>{{materias}}</th>
+                  {{/each}}
+                </tr>
+                {{/if}}
+              </thead>
+              <tbody>
+                {{#each matcal10}}
+                <tr>
+                  <td>{{periodo}}</td>
+                  <td>{{nombres}}</td>
+                  <td>{{calificaciones}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <!--Fin de 10mo Periodo-->
+          </div>
+        </div>
+        <!-- /Single Product Block -->
+
+      </div>
+
+    </div>
+    <!-- /Games List -->
+
+  </div>
+
+
+  <script>
+  var id_materias = document.getElementById('id_materias'),
+  resultado = document.getElementById('resultado');
+
+  id_materias.addEventListener('input', function () {
+    var error = true;
+    try{
+      //Si sólo tiene números y signos + - * / ( )
+      if (/^[\d-+/*()]+$/.test(id_materias.value)) {
+        // Evaluar el resultado
+        resultado.innerText = eval(id_materias.value);
+        error = false;
+      }
+    } catch (err) { }
+    if (error) // Si no se pudo calcular
+    resultado.innerText = "Por favor vuelve a selecciona una materia.";
+  });
+</script>
+
+</div>
+<style>
+.colorlike {color:green;}
+.colorpastel {color:red;}
+.colorbarra {color:blue;}
+</style>

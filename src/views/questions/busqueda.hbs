@@ -1,0 +1,166 @@
+<div class="content-wrap" itemscope itemtype="http://schema.org/Question">
+  <div class="container youplay-store">
+
+    <div class="col-md-9">
+
+      <div class="reviews-block mb-0">
+        <h2 itemprop="name">Questions</h2>
+        <form action="/questions/busqueda" method="post">
+          <div class="youplay-input">
+            <input type="text" name="searkey" placeholder="Buscar pregunta..." autofocus>
+          </div>
+        </form>
+        {{#if user}}
+        <p itemprop="name">Quieres realizar una pregunta? <a href="/questions/question/{{user.id}}/{{user.token}}">click aqui</a> </p>
+        {{/if}}
+        <ul class="reviews-list">
+          {{#each question}}
+          <li>
+            <article>
+              <div class="review-avatar pull-left" itemprop="author" itemscope itemtype = "http://schema.org/Person">
+                <img src="/images/profile/{{profileimage}}" height="50px" width="50px"alt="">
+              </div>
+              <div class="review-cont clearfix review-text">
+                <div class="date" itemprop="author" itemscope itemtype="http://schema.org/Person">{{nombre}} {{apellido}}</div>
+                <a class="review-author h4" href="/questions/answer/{{id_pregunta}}/{{token}}" itemprop="name">{{titulo}}</a>
+                <div class="date"><i class="fa fa-calendar" itemprop="dateCreated"></i> {{timeago created_at}}</div>
+              </div>
+            </article>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <!-- Right Side -->
+    <!-- <div class="col-md-3"> -->
+      <div class="">
+      <div class="side-block">
+        <!--<h4 class="block-title">Popular Games</h4>-->
+        <div class="block-content p-0">
+          <!-- Single News Block -->
+          <div class="col-lg-3 col-md-4 ">
+                <div class="news-one">
+                    <a href="/contacto" class="angled-img">
+                        <div class="">
+                            <img src="/images/light/Anuncio1.png" alt="Anunciate en uvlum" width="600" height="300">
+                        </div>
+                    </a>
+                </div>
+            </div>
+          <!-- /Single News Block -->
+        </div>
+      </div>
+
+      <!-- Side Search -->
+      <!--<div class="side-block">
+        <p>Search by Games:</p>
+        <form action="light-search.html">
+          <div class="youplay-input">
+            <input type="text" name="search" placeholder="enter search term">
+          </div>
+        </form>
+      </div>-->
+      <!-- /Side Search -->
+
+      <!-- Side Categories -->
+      <!--<div class="side-block">
+        <h4 class="block-title">Categories</h4>
+        <ul class="block-content">
+          <li><a href="#">All</a></li>
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Adventure</a></li>
+          <li><a href="#">Casual</a></li>
+          <li><a href="#">Indie</a></li>
+          <li><a href="#">Racing</a></li>
+          <li><a href="#">RPG</a></li>
+          <li><a href="#">Simulation</a></li>
+          <li><a href="#">Strategy</a></li>
+        </ul>
+      </div>-->
+      <!-- /Side Categories -->
+
+      <!-- Side Popular News -->
+      <div class="side-block">
+        <!--<h4 class="block-title">Popular Games</h4>-->
+        <div class="block-content p-0">
+          <!-- Single News Block -->
+          <!--<div class="row youplay-side-news">
+            <div class="col-xs-3 col-md-4">
+              <a href="light-store-product-1.html" class="angled-img">
+                <div class="img">
+                  <img src="/images/light/game-road-no-taken-500x375.jpg" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-9 col-md-8">
+              <h4 class="ellipsis"><a href="light-store-product-1.html" title="Road Not Taken">Road Not Taken</a></h4>
+              <span class="price">$50.00</span>
+            </div>
+          </div>-->
+          <!-- /Single News Block -->
+
+          <!-- Single News Block -->
+          <!--<div class="row youplay-side-news">
+            <div class="col-xs-3 col-md-4">
+              <a href="#" class="angled-img">
+                <div class="img">
+                  <img src="/images/light/game-botanicula-500x375.jpg" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-9 col-md-8">
+              <h4 class="ellipsis"><a href="#" title="Botanicula">Botanicula</a></h4>
+              <span class="price">$39.99 <sup><del>$49.99</del></sup></span>
+            </div>
+          </div>-->
+          <!-- /Single News Block -->
+
+          <!-- Single News Block -->
+          <!--<div class="row youplay-side-news">
+            <div class="col-xs-3 col-md-4">
+              <a href="#" class="angled-img">
+                <div class="img">
+                  <img src="/images/light/game-journey-500x375.jpg" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-9 col-md-8">
+              <h4 class="ellipsis"><a href="#" title="Journey">Journey</a></h4>
+              <span class="price">$20.00</span>
+            </div>
+          </div>-->
+          <!-- /Single News Block -->
+
+          <!-- Single News Block -->
+          <!--<div class="row youplay-side-news">
+            <div class="col-xs-3 col-md-4">
+              <a href="#" class="angled-img">
+                <div class="img">
+                  <img src="/images/light/game-world-of-goo-500x375.jpg" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-9 col-md-8">
+              <h4 class="ellipsis"><a href="#" title="World of Goo">World of Goo</a></h4>
+              <span class="price">$10.00</span>
+            </div>
+          </div>-->
+          <!-- /Single News Block -->
+        </div>
+      </div>
+      <!-- /Side Popular News -->
+
+      <!-- Instagram -->
+      <!--<div class="side-block">
+        <h4 class="block-title">Instagram</h4>
+        <div class="youplay-instagram row small-gap" data-instagram-user-id="2133360819"
+        ></div>
+      </div>-->
+      <!-- /Instagram -->
+
+    </div>
+    <!-- /Right Side -->
+
+  </div>
+
+</div>

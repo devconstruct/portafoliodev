@@ -1,0 +1,644 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+<div class="no-banner">
+
+  <div class="container youplay-news youplay-post">
+    <div class="container youplay-content">
+      <!--INICIO Graficas MAPA CURRICULAR A MEDIADOS 2019-->
+
+      <!-- Post Info -->
+      <div class="content">
+        <div class="meta">
+          <div class="item">
+            <a id="downloadLink" onclick="exportF(this)"><i class="fa fa-file-excel-o colorlike" aria-hidden="true"></i> Descargar lista de alumnos</a>
+          </div>
+          <div class="item">
+            <a id="foo"><i class="fa fa-bar-chart colorbarra" aria-hidden="true"></i> Descargar Gráfica de Barras</a>
+          </div>
+        </div>
+      </div>
+      <article class="news-one">
+        <!-- Post Text -->
+        <div class="description">
+
+          <!-- Tables -->
+          <table class="table table-bordered table-hover" id="table">
+            <thead>
+              <tr>
+                <th>Periodo</th>
+                <th>Nombre</th>
+                {{#each listmaterias}}
+                <th>{{materias}}</th>
+                {{/each}}
+              </tr>
+            </thead>
+            <tbody>
+              {{#each listalumnos}}
+              <tr>
+                <td>{{periodo}}</td>
+                <td>{{nombres}}</td>
+                <td>{{calificaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <!-- /Tables -->
+
+
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <!-- Inicio para grafivar periodo 1-->
+          {{#each matcal1}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 1-->
+
+          <!-- Inicio para grafivar periodo 2-->
+          {{#each matcal2}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 2-->
+
+          <!-- Inicio para grafivar periodo 3-->
+          {{#each matcal3}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 3-->
+
+          <!-- Inicio para grafivar periodo 4-->
+          {{#each matcal4}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 4-->
+
+          <!-- Inicio para grafivar periodo 5-->
+          {{#each matcal5}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 5-->
+
+          <!-- Inicio para grafivar periodo 6-->
+          {{#each matcal6}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 6-->
+
+          <!-- Inicio para grafivar periodo 7-->
+          {{#each matcal7}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 7-->
+
+          <!-- Inicio para grafivar periodo 8-->
+          {{#each matcal8}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 8-->
+
+          <!-- Inicio para grafivar periodo 9-->
+          {{#each matcal9}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 9-->
+
+          <!-- Inicio para grafivar periodo 10-->
+          {{#each matcal10}}
+          <!--Inicio de grafica de barras-->
+          <script>
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', '');
+            data.addColumn({ type: 'string', role: 'style' });
+
+            data.addRows(9);
+
+            data.setValue(0, 0, 'Calificacion Menor a 5');
+            data.setValue(0, 1, {{menor5}});
+            data.setValue(0, 2, 'rgb(200, 20, 60)');
+            data.setValue(1, 0, 'Calificación de 6');
+            data.setValue(1, 1, {{igual6}});
+            data.setValue(1, 2, 'rgb(20, 10, 229)');
+            data.setValue(2, 0, 'Calificación de 7');
+            data.setValue(2, 1, {{igual7}});
+            data.setValue(2, 2, 'rgb(158, 17, 175)');
+            data.setValue(3, 0, 'Calificación de 8');
+            data.setValue(3, 1, {{igual8}});
+            data.setValue(3, 2, 'rgb(175, 17, 58 )');
+            data.setValue(4, 0, 'Calificación de 9');
+            data.setValue(4, 1, {{igual9}});
+            data.setValue(4, 2, 'rgb(17, 175, 173)');
+            data.setValue(5, 0, 'Calificación de 10');
+            data.setValue(5, 1, {{igual10}});
+            data.setValue(5, 2, 'rgb(30, 55, 55)');
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, {
+              title: 'Calificaciones',
+              legend: 'none',
+            });
+          }
+
+          google.load("visualization", "1", {
+            packages: ["corechart"],
+            callback: function() { drawChart(); }
+          });
+
+          </script>
+          <!--Fin de grafica de barras-->
+
+          <div class="align-center">
+
+            <div class="img">
+              <div id="chart_div"></div>
+            </div>
+
+          </div>
+          {{/each}}
+          <!-- Fin para grafivar periodo 10-->
+
+        </div>
+        <!-- /Post Text -->
+      </article>
+      <!-- /Post Info -->
+
+      <!--FIN Graficas MAPA CURRICULAR A MEDIADOS 2019-->
+    </div>
+  </div>
+</div>
+<script>
+function exportF(elem) {
+  var table = document.getElementById("table");
+  var html = table.outerHTML;
+  var url = 'data:application/vnd.ms-excel,' + escape(html);
+  elem.setAttribute("href", url);
+  elem.setAttribute("download", "listalumnos.xls");
+  return false;
+}
+</script>
+<script>
+var node = document.getElementById('chart_div');
+var btn = document.getElementById('foo');
+
+btn.onclick = function() {
+
+  domtoimage.toBlob(document.getElementById('chart_div'))
+    .then(function(blob) {
+      window.saveAs(blob, 'grafica-uvlum-barras.png');
+    });
+}
+</script>
+<style>
+.colorlike {color:green;}
+.colorpastel {color:red;}
+.colorbarra {color:blue;}
+</style>

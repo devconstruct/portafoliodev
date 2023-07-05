@@ -1,0 +1,577 @@
+<!--Inicio 1er - 3er Año 1er Bimestre-->
+{{#each calificarB1}}
+<!-- Tables -->
+<div class="container">
+
+
+<h2 class="h1">1er Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento del Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socioemocional</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cono_medio}}</td>
+      <td>{{cien_nat_tec}}</td>
+      <td>{{his_pais_conv}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_socio}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_primerotercero}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_1_3B1}}
+<!-- Review Rating -->
+<br><br><br>
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 1er Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/1">Calificar a {{porcalificar.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- /Review Rating -->
+{{/if}}
+{{/each}}
+<!--Fin 1er - 3er Año 1er Bimestre-->
+
+<!--Inicio 1er - 3er Año 2do Bimestre-->
+{{#each calificarB2}}
+<!-- Tables -->
+<h2 class="h1">2do Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento del Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socioemocionalo</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cono_medio}}</td>
+      <td>{{cien_nat_tec}}</td>
+      <td>{{his_pais_conv}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_socio}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_primerotercero}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_1_3B2}}
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 2do Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/2">Calificar a {{porcalificar.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 1er - 3er Año 2do Bimestre-->
+
+<!--Inicio 1er - 3er Año 3er Bimestre-->
+{{#each calificarB3}}
+<!-- Tables -->
+<h2 class="h1">3er Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento del Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socioemocional</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cono_medio}}</td>
+      <td>{{cien_nat_tec}}</td>
+      <td>{{his_pais_conv}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_socio}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_primerotercero}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_1_3B3}}
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 3er Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/3">Calificar a {{porcalificar.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 1er - 3er Año 3er Bimestre-->
+
+<!--Inicio 1er - 3er Año 4to Bimestre-->
+{{#each calificarB4}}
+<!-- Tables -->
+<h2 class="h1">4to Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento del Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socio</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cono_medio}}</td>
+      <td>{{cien_nat_tec}}</td>
+      <td>{{his_pais_conv}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_socio}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_primerotercero}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_1_3B4}}
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 4to Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/4">Calificar a {{porcalificar.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 1er - 3er Año 4to Bimestre-->
+
+<!--Inicio 1er - 3er Año 5to Bimestre-->
+{{#each calificarB5}}
+<!-- Tables -->
+<h2 class="h1">5to Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento del Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socio</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cono_medio}}</td>
+      <td>{{cien_nat_tec}}</td>
+      <td>{{his_pais_conv}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_socio}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_primerotercero}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_1_3B5}}
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 5to Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar.id_matricula}}/{{porcalificar.grado}}/5">Calificar a {{porcalificar.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 1er - 3er Año 5to Bimestre-->
+
+<!--Inicio 4to - 6to Año 1er Bimestre-->
+{{#each calificar_cuarto_sextoB1}}
+<!-- Tables -->
+<h2 class="h1">1er Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento del Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socio</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cien_naturales}}</td>
+      <td>{{historia}}</td>
+      <td>{{geografia}}</td>
+      <td>{{form_civ_etica}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_cuartosexto}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_4_6B1}}
+<br><br><br>
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 1er Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar_cuarto_sexto.id_matricula}}/{{porcalificar_cuarto_sexto.grado}}/1">Calificar a {{porcalificar_cuarto_sexto.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 4to - 6to Año 1er Bimestre-->
+
+<!--Inicio 4to - 6to Año 2do Bimestre-->
+{{#each calificar_cuarto_sextoB2}}
+<!-- Tables -->
+<h2 class="h1">2do Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socio</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cien_naturales}}</td>
+      <td>{{historia}}</td>
+      <td>{{geografia}}</td>
+      <td>{{form_civ_etica}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_cuartosexto}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_4_6B2}}
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 2do Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar_cuarto_sexto.id_matricula}}/{{porcalificar_cuarto_sexto.grado}}/2">Calificar a {{porcalificar_cuarto_sexto.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 4to - 6to Año 2do Bimestre-->
+
+<!--Inicio 4to - 6to Año 3er Bimestre-->
+{{#each calificar_cuarto_sextoB3}}
+<!-- Tables -->
+<h2 class="h1">3er Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socio</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cien_naturales}}</td>
+      <td>{{historia}}</td>
+      <td>{{geografia}}</td>
+      <td>{{form_civ_etica}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_cuartosexto}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_4_6B3}}
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 3er Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar_cuarto_sexto.id_matricula}}/{{porcalificar_cuarto_sexto.grado}}/3">Calificar a {{porcalificar_cuarto_sexto.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 4to - 6to Año 3er Bimestre-->
+
+<!--Inicio 4to - 6to Año 4to Bimestre-->
+{{#each calificar_cuarto_sextoB4}}
+<!-- Tables -->
+<h2 class="h1">4to Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socio</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cien_naturales}}</td>
+      <td>{{historia}}</td>
+      <td>{{geografia}}</td>
+      <td>{{form_civ_etica}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_cuartosexto}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_4_6B4}}
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 4to Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar_cuarto_sexto.id_matricula}}/{{porcalificar_cuarto_sexto.grado}}/4">Calificar a {{porcalificar_cuarto_sexto.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 4to - 6to Año 4to Bimestre-->
+
+<!--Inicio 4to - 6to Año 5to Bimestre-->
+{{#each calificar_cuarto_sextoB5}}
+<!-- Tables -->
+<h2 class="h1">5to Bimestre</h2>
+<table class="table table-bordered table-hover" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+  <thead>
+    <tr>
+      <th>Bimestre</th>
+      <th itemprop="name">Nombre</th>
+      <th itemprop="name">Español</th>
+      <th itemprop="name">Matemáticas</th>
+      <th itemprop="name">Conocimiento del Medio</th>
+      <th itemprop="name">Ciencias Naturales</th>
+      <th itemprop="name">Historia</th>
+      <th itemprop="name">Artes</th>
+      <th itemprop="name">Educación Socio</th>
+      <th itemprop="name">Educación Fisica</th>
+      <th itemprop="name">Ingles</th>
+      <th>Promedio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{bimestre}}</td>
+      <td>{{nombres}}</td>
+      <td>{{espanol}}</td>
+      <td>{{matematicas}}</td>
+      <td>{{cien_naturales}}</td>
+      <td>{{historia}}</td>
+      <td>{{geografia}}</td>
+      <td>{{form_civ_etica}}</td>
+      <td>{{artes}}</td>
+      <td>{{edu_fisica}}</td>
+      <td>{{ingles}}</td>
+      <td>{{P}}</td>
+      <td><a href="/calificaciones/edit/{{grado}}/{{id_cuartosexto}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Tables -->
+{{else}}
+{{#if calificar_4_6B5}}
+<div class="youplay-review-rating align-center">
+  <div class="row">
+    <div class="col-md-12" itemscope itemtype="http://schema.org/EducationalOccupationalCredential">
+      <h3 class="mt-0" itemprop="name">Aun no tiene calificación de 5to Bimestre</h3>
+      <ul>
+        <li itemprop="name"><i class="fa fa-plus-circle"></i><a class="btn btn-lg" href="/calificaciones/calificar/{{porcalificar_cuarto_sexto.id_matricula}}/{{porcalificar_cuarto_sexto.grado}}/5">Calificar a {{porcalificar_cuarto_sexto.nombres}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/each}}
+<!--Fin 4to - 6to Año 5to Bimestre-->
+</div>
