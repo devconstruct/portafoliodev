@@ -1,5 +1,6 @@
 module.exports = {
   database: {
+    client: 'mysql2',
     host: 'sql.freedb.tech',
     port: '3306',
     user: 'freedb_ucy0srrzvb1jeo8o',
