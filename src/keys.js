@@ -1,10 +1,10 @@
 module.exports = {
   database: {
-    host: 'but56ccwtno412ncbajp-mysql.services.clever-cloud.com',
+    host: 'sql.freedb.tech',
     port: '3306',
-    user: 'ucy0srrzvb1jeo8o',
-    password: 'RIRZ7gnHKPpJj1p2Z5YM',
-    database: 'but56ccwtno412ncbajp'
+    user: 'freedb_ucy0srrzvb1jeo8o',
+    password: 'BwMeJ8FK@Y7dgN8',
+    database: 'freedb_but56ccwtno412ncbajp'
   }
 };
 // module.exports = {
