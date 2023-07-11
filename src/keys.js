@@ -8,14 +8,25 @@
 //  }
 //};
 
+//Conexion buena pero lenta
+//module.exports = {
+//  database: {
+//    host: 'but56ccwtno412ncbajp-mysql.services.clever-cloud.com',
+//    port: '3306',
+//    user: 'ucy0srrzvb1jeo8o',
+//    password: 'RIRZ7gnHKPpJj1p2Z5YM',
+//    database: 'but56ccwtno412ncbajp'
+//  }
+//};
+
 //Conexion buena
 module.exports = {
   database: {
-    host: 'but56ccwtno412ncbajp-mysql.services.clever-cloud.com',
+    host: 'sql9.freesqldatabase.com',
     port: '3306',
-    user: 'ucy0srrzvb1jeo8o',
-    password: 'RIRZ7gnHKPpJj1p2Z5YM',
-    database: 'but56ccwtno412ncbajp'
+    user: 'sql9632111',
+    password: 'ypzfEtcpNe',
+    database: 'sql9632111'
   }
 };
 
