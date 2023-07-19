@@ -1,12 +1,12 @@
-//module.exports = {
-//  database:{
-//    host: 'sql.freedb.tech',
-//    port: '3306',
-//    user: 'freedb_ucy0srrzvb1jeo8o',
-//    password: 'BwMeJ8FK@Y7dgN8',
-//    database: 'freedb_but56ccwtno412ncbajp',
-//  }
-//};
+module.exports = {
+  database:{
+    host: 'sql.freedb.tech',
+    port: '3306',
+    user: 'freedb_ucy0srrzvb1jeo8o',
+    password: 'BwMeJ8FK@Y7dgN8',
+    database: 'freedb_but56ccwtno412ncbajp',
+  }
+};
 
 //Conexion buena pero lenta
 //module.exports = {
@@ -20,15 +20,15 @@
 //};
 
 //Conexion buena
-module.exports = {
-  database: {
-    host: 'sql9.freesqldatabase.com',
-    port: '3306',
-    user: 'sql9632111',
-    password: 'ypzfEtcpNe',
-    database: 'sql9632111'
-  }
-};
+//module.exports = {
+//  database: {
+//    host: 'sql9.freesqldatabase.com',
+//    port: '3306',
+//    user: 'sql9632111',
+//    password: 'ypzfEtcpNe',
+//    database: 'sql9632111'
+//  }
+//};
 
 //---------------------------------------
 //module.exports = {
